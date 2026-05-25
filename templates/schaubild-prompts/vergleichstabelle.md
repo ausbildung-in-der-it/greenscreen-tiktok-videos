@@ -56,6 +56,6 @@ Row 2 attribute label "{{ATTR_2}}":
 | Ablauf | Frage → Antwort | Schleife |
 | Ziel | wartet | verfolgt Ziel |
 
-## Tipp
+## Provider
 
-Bei Tabellen ist Text-Treue wichtig. **OpenAI mit hoher Qualitätsstufe** liefert hier oft sauberer als Gemini.
+Siehe `docs/schaubild-prompting.md`. Default: Gemini.

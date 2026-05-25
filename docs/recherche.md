@@ -58,6 +58,30 @@ Agent({
 })
 ```
 
+## Datum-Check: gibt es eine neuere Quelle?
+
+Bevor du eine Statistik, einen Bericht oder einen Datenstand im Skript zitierst, prüfe immer, ob inzwischen eine neuere Erhebung verfügbar ist. Quellen mit jährlichem oder periodischem Rhythmus altern schnell.
+
+Faustregel: wenn die zitierte Quelle älter als 12 Monate ist, suche aktiv nach der nächsten Version.
+
+Bekannte Periodika, die regelmäßig erneuert werden:
+
+| Quelle | Rhythmus | Veröffentlichung typischerweise |
+|---|---|---|
+| BIBB-Erhebung Tab67 (Neuabschlüsse) | jährlich, Stichtag 30.09. | Dezember des laufenden Jahres |
+| BIBB-Datenreport zum Berufsbildungsbericht | jährlich | Frühjahr |
+| Statistisches Bundesamt, Auszubildende | jährlich | März und August |
+| BERUFENET-Steckbriefe | laufend, Stand-Datum im PDF | mehrmals pro Jahr |
+| Anthropic Model-Releases | unregelmäßig | mehrmals pro Jahr |
+
+Vorgehen, wenn du eine BIBB-Tabelle einbauen willst:
+
+1. Suche nach "Tabelle 67 [aktuelles Jahr]" auf bibb.de
+2. Wenn vorhanden: nimm die neueste Version
+3. Wenn nicht vorhanden: nimm die letzte verfügbare und markiere im Skript explizit den Stand-Datum
+
+Den gleichen Check machst du für jede einzelne Behauptung mit Datum oder Versionsnummer im Skript.
+
 ## Selbst-Check vor Skript-Finalisierung
 
 Grep-Liste, die du vor jedem Video einmal durchgehst:
@@ -67,6 +91,7 @@ Grep-Liste, die du vor jedem Video einmal durchgehst:
 - Jedes Datum: stimmt es mit Pressemitteilung oder Release Notes überein?
 - Jedes wörtliche Zitat: exakt aus der Quelle übernommen, mit Original-Wortlaut?
 - Jede Behauptung über einen Anbieter: zur offiziellen Doku verlinkt, nicht zu Drittquellen?
+- Jede Statistik: gibt es eine neuere Erhebung (siehe Datum-Check oben)?
 
 Bei Unsicherheit: lieber recherchieren als raten. Bei Nicht-Verifizierbarkeit: explizit als "nicht verifiziert" markieren, nicht weglassen.
 

@@ -55,14 +55,16 @@
     border: 1px solid var(--border); border-radius: 6px;
     background: white; flex-shrink: 0;
   }
-  .bullets { flex: 1; }
-  .bullets h3 {
+  .sprechtext { flex: 1; }
+  .sprechtext h3 {
     font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px;
     color: var(--muted); margin: 0 0 8px; font-weight: 600;
   }
-  .bullets ul { margin: 0 0 16px; padding-left: 20px; }
-  .bullets li { margin-bottom: 6px; font-size: 16px; }
-  .bullets li strong { color: var(--primary); }
+  .sprechtext p {
+    margin: 0 0 12px; font-size: 16px; line-height: 1.6;
+  }
+  .sprechtext p:last-child { margin-bottom: 0; }
+  .sprechtext strong { color: var(--primary); }
   .nuance {
     background: var(--nuance-bg); border-left: 4px solid var(--nuance-border);
     padding: 14px 18px; border-radius: 4px; margin-top: 16px; font-size: 14px;
@@ -102,14 +104,28 @@
 </head>
 <body>
 
+<!--
+  Hinweis fürs Befüllen:
+
+  - Jede Sektion enthält ein eigenes Schaubild. Keine Vollbild-Sektion.
+  - "Was du sagst" ist ein <p>-Block mit ausformulierten Sprechsätzen,
+    keine Bullet-Stichpunkte. Substanz: konkrete Beispiele, Zahlen,
+    Arbeitgeber-Namen, Bilder im Kopf des Zuschauers.
+  - Anzahl Sektionen und Schaubilder richten sich nach dem Storytelling-Bogen
+    aus docs/storytelling.md. Sektionen unten sind ein Beispiel für Bogen A
+    (Aufklärungs-Pattern, 60s). Bei anderen Bögen passe an.
+  - Wiederverwendung eines Schaubilds über zwei Sektionen ist erlaubt
+    (z.B. Hauptbild in Definition und Mechanismus). Dann SCHAUBILD_X = SCHAUBILD_Y.
+-->
+
 <h1>{{VIDEO_TITLE}}</h1>
 <p class="lead">{{VIDEO_LEAD}}</p>
 
 <nav>
   <a href="#hook">Hook</a>
-  <a href="#sektion-1">Sektion 1</a>
-  <a href="#sektion-2">Sektion 2</a>
-  <a href="#sektion-3">Sektion 3</a>
+  <a href="#abgrenzung">Abgrenzung</a>
+  <a href="#definition">Definition</a>
+  <a href="#mechanismus">Mechanismus</a>
   <a href="#praxis">Praxis</a>
   <a href="#outro">Outro</a>
   <a href="#quellen">Quellen</a>
@@ -122,13 +138,14 @@
 
 <section id="hook">
   <span class="timing">0 bis 5 Sekunden, Hook</span>
-  <h2>Du im Vollbild, kein Schaubild</h2>
-  <div class="bullets">
-    <h3>Was du sagst</h3>
-    <ul>
-      <li>{{HOOK_LINE_1}}</li>
-      <li>{{HOOK_LINE_2}}</li>
-    </ul>
+  <h2>{{HOOK_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_HOOK}}" alt="{{SCHAUBILD_HOOK_ALT}}">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>{{HOOK_SATZ_1}}</p>
+      <p>{{HOOK_SATZ_2}}</p>
+    </div>
   </div>
   <div class="nuance">
     <strong>Nuance, falls jemand widerspricht</strong>
@@ -136,18 +153,15 @@
   </div>
 </section>
 
-<section id="sektion-1">
+<section id="abgrenzung">
   <span class="timing">5 bis 20 Sekunden, Abgrenzung</span>
   <h2>{{SEKTION_1_TITLE}}</h2>
   <div class="visual">
     <img src="schaubilder/{{SCHAUBILD_1}}" alt="{{SCHAUBILD_1_ALT}}">
-    <div class="bullets">
+    <div class="sprechtext">
       <h3>Was du sagst</h3>
-      <ul>
-        <li>{{S1_BULLET_1}}</li>
-        <li>{{S1_BULLET_2}}</li>
-        <li>{{S1_BULLET_3}}</li>
-      </ul>
+      <p>{{S1_SATZ_1}}</p>
+      <p>{{S1_SATZ_2}}</p>
     </div>
   </div>
   <div class="nuance">
@@ -156,18 +170,15 @@
   </div>
 </section>
 
-<section id="sektion-2">
-  <span class="timing">20 bis 36 Sekunden, Was ist es?</span>
+<section id="definition">
+  <span class="timing">20 bis 36 Sekunden, Definition</span>
   <h2>{{SEKTION_2_TITLE}}</h2>
   <div class="visual">
     <img src="schaubilder/{{SCHAUBILD_2}}" alt="{{SCHAUBILD_2_ALT}}">
-    <div class="bullets">
+    <div class="sprechtext">
       <h3>Was du sagst</h3>
-      <ul>
-        <li>{{S2_BULLET_1}}</li>
-        <li>{{S2_BULLET_2}}</li>
-        <li>{{S2_BULLET_3}}</li>
-      </ul>
+      <p>{{S2_SATZ_1}}</p>
+      <p>{{S2_SATZ_2}}</p>
     </div>
   </div>
   <div class="nuance">
@@ -176,18 +187,15 @@
   </div>
 </section>
 
-<section id="sektion-3">
-  <span class="timing">36 bis 50 Sekunden, Wie arbeitet er?</span>
+<section id="mechanismus">
+  <span class="timing">36 bis 50 Sekunden, Mechanismus</span>
   <h2>{{SEKTION_3_TITLE}}</h2>
   <div class="visual">
     <img src="schaubilder/{{SCHAUBILD_3}}" alt="{{SCHAUBILD_3_ALT}}">
-    <div class="bullets">
+    <div class="sprechtext">
       <h3>Was du sagst</h3>
-      <ul>
-        <li>{{S3_BULLET_1}}</li>
-        <li>{{S3_BULLET_2}}</li>
-        <li>{{S3_BULLET_3}}</li>
-      </ul>
+      <p>{{S3_SATZ_1}}</p>
+      <p>{{S3_SATZ_2}}</p>
     </div>
   </div>
   <div class="nuance">
@@ -200,30 +208,27 @@
   <span class="timing">50 bis 58 Sekunden, Praxis-Anker</span>
   <h2>{{PRAXIS_TITLE}}</h2>
   <div class="visual">
-    <img src="schaubilder/{{SCHAUBILD_4}}" alt="{{SCHAUBILD_4_ALT}}">
-    <div class="bullets">
+    <img src="schaubilder/{{SCHAUBILD_PRAXIS}}" alt="{{SCHAUBILD_PRAXIS_ALT}}">
+    <div class="sprechtext">
       <h3>Was du sagst</h3>
-      <ul>
-        <li>{{P_BULLET_1}}</li>
-        <li>{{P_BULLET_2}}</li>
-        <li>{{P_BULLET_3}}</li>
-      </ul>
+      <p>{{PRAXIS_SATZ_1}}</p>
     </div>
   </div>
   <div class="nuance">
-    <strong>{{P_NUANCE_TITLE}}</strong>
-    <p>{{P_NUANCE_TEXT}}</p>
+    <strong>{{PRAXIS_NUANCE_TITLE}}</strong>
+    <p>{{PRAXIS_NUANCE_TEXT}}</p>
   </div>
 </section>
 
 <section id="outro">
   <span class="timing">58 bis 60 Sekunden, CTA</span>
-  <h2>Outro, du im Vollbild</h2>
-  <div class="bullets">
-    <h3>Was du sagst</h3>
-    <ul>
-      <li>{{CTA_LINE}}</li>
-    </ul>
+  <h2>{{OUTRO_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_OUTRO}}" alt="{{SCHAUBILD_OUTRO_ALT}}">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>{{OUTRO_SATZ}}</p>
+    </div>
   </div>
 </section>
 

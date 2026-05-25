@@ -18,57 +18,43 @@ Ohne saubere Prämisse kein Video.
 
 ## Schritt 2: Recherche
 
-Siehe `docs/recherche.md`. Kurz:
-
-- WebSearch und exa AI MCP parallel laufen lassen
-- Nur Primärquellen zählen (Anbieter-Docs, Papers, OECD, NN/G)
-- Bei Bedarf Opus-Subagent für historische Tiefe oder konkurrierende Definitionen
-- Konflikte benennen, nicht überdecken
-
-Output: ein `recherche.md` im Video-Ordner mit Quellen und Schlüssel-Befunden.
+Siehe `docs/recherche.md`. Output: ein `recherche.md` im Video-Ordner mit Quellen und Schlüssel-Befunden. Bei Tiefen-Recherche zusätzlich `recherche-tiefe.md`.
 
 ## Schritt 3: Storytelling-Bogen
 
-Wähle eine der Strukturen aus `docs/storytelling.md`. Default ist der **Aufklärungs-Bogen**:
+Wähle einen Bogen aus `docs/storytelling.md`. Default ist der **Aufklärungs-Bogen** (Bogen A). Bei Berufswahl- oder Abgrenzungs-Themen meist Bogen C (Vergleichs-Pattern).
 
-1. Hook (0 bis 5 s)
-2. Abgrenzung (5 bis 20 s)
-3. Definition (20 bis 36 s)
-4. Mechanismus (36 bis 50 s)
-5. Praxis-Anker (50 bis 58 s)
-6. CTA (58 bis 60 s)
+## Schritt 4: Schaubild-Sequenz planen
 
-## Schritt 4: Drei Schaubild-Ansätze
+Anzahl Schaubilder pro Video richtet sich nach dem Bogen, **mindestens drei**. Der Sprecher steht in jedem Moment vor einem Schaubild, es gibt keine Vollbild-Sektionen.
 
-Skizziere drei konkurrierende visuelle Ansätze. Beispiel für "Was ist ein KI-Agent":
+Tabellen pro Bogen siehe `docs/storytelling.md`. Beispiele:
 
-- Ansatz A: Hub-Spoke-Komponenten
-- Ansatz B: Vergleichstabelle Chatbot vs Agent
-- Ansatz C: Kreislauf-Diagramm
+- Bogen A (Aufklärung, 60s): typischerweise 4 bis 5 Schaubilder
+- Bogen B (Historie, 90s): 5 bis 6 Schaubilder
+- Bogen C (Vergleich, 60s): 3 bis 5 Schaubilder
+- Bogen D (How-to, 120s): 5 bis 7 Schaubilder
 
-Lass den User wählen, dann erst generieren. Spart Iterationen.
+Vor dem Generieren: pro Sektion einen Schaubild-Typ benennen (Hub-Spoke, Vergleichstabelle, Kreislauf, Matrix, Zeitstrahl, Beispiel-Bild, Hook-Bild, Outro-Bild). Wiederverwendung des Hauptbildes über zwei Sektionen ist erlaubt, wenn die zweite Sektion eine Vertiefung der ersten ist.
 
 ## Schritt 5: Schaubilder generieren
 
-Pro Schaubild:
+Siehe `docs/schaubild-prompting.md` für Provider, Style-Block, Mechanik. Pro Schaubild:
 
-1. Prompt aus `templates/schaubild-prompts/` als Basis nehmen
-2. Stil-Block aus `templates/style-suffix-wissenschaft.md` anhängen
-3. Provider wählen (Gemini default, OpenAI bei Text-Heavy)
-4. `tools image generate --aspect-ratio=1:1 --image-size=2K -o ./schaubilder/X.png`
-5. Output flach kopieren (tools CLI legt timestamped Files in einem Unterordner ab)
-6. Umlaute und Sub-Texte visuell prüfen
-7. Bei Bedarf Img2img-Korrektur
+1. Diagramm-Typ wählen, Prompt aus `templates/schaubild-prompts/` als Basis
+2. Style-Block aus `templates/style-suffix-wissenschaft.md` anhängen
+3. Generieren, flach kopieren, visuell prüfen
+4. Bei Fehlern: Img2img-Korrektur
 
 ## Schritt 6: HTML-Skript
 
 Auf Basis von `templates/skript.html.template`:
 
 - Prämisse-Box oben
-- Pro Sektion: Timing, Schaubild, Stichpunkte, Nuance-Box
+- Pro Sektion: Timing, Schaubild-Referenz, **ausformulierte Sprechsätze** (siehe `docs/storytelling.md`), Nuance-Box
 - Quellen am Ende, klickbar
 
-Stichpunkte sind kurze Phrasen (max. 6 bis 8 Wörter), nicht ausformulierte Sätze. Du sprichst frei.
+Sprechsätze sind keine Stichpunkte und kein Teleprompter-Text. Sie enthalten Substanz: konkrete Beispiele, Zahlen, Arbeitgeber-Namen, Bilder im Kopf. Du liest sie vor der Aufnahme einmal und sprichst dann frei.
 
 Nuance-Boxen enthalten Detail-Antworten für Kommentar-Rückfragen. Wichtig: was wurde **bewusst weggelassen**, und warum.
 
@@ -82,14 +68,14 @@ Erzeugt unter `videos/NN-thema/tiktok-1080x1920/`:
 
 - 1080x1920 Canvas, weiß
 - Schaubild oben mit Padding (Default 130/180)
-- Greenscreen-Raum unten
+- Greenscreen-Raum unten (Default 920px)
 
 ## Schritt 8: Aufnehmen
 
-- Greenscreen vor dem Bild positioniert
-- Du sprichst frei nach Bullets aus dem HTML
+- Greenscreen vor dem Composite-Bild positioniert
+- Pro Sektion das jeweilige Schaubild als Hintergrund einblenden
+- Du sprichst frei nach den Sprechsätzen aus dem HTML
 - Pausen zwischen Sektionen einplanen, damit der Zuschauer Schaubilder lesen kann
-- Schnittprogramm: Schaubilder als Hintergrund einblenden, du als Cutout davor
 
 ## Selbst-Check vor dem Upload
 
@@ -98,5 +84,6 @@ Erzeugt unter `videos/NN-thema/tiktok-1080x1920/`:
 3. Keine Em-Dashes im sichtbaren Text?
 4. Hook in den ersten 3 Sekunden?
 5. CTA klar und einladend?
+6. Wirklich kein Vollbild-Moment ohne Schaubild?
 
-Wenn alle 5 Punkte erfüllt sind: hochladen.
+Wenn alle 6 Punkte erfüllt sind: hochladen.

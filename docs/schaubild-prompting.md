@@ -16,14 +16,11 @@ Wie du saubere wissenschaftliche Schaubilder mit Bildgenerierung erzeugst, ohne 
 
 Liegt in `templates/style-suffix-wissenschaft.md`. An jeden Bild-Prompt unten anhängen.
 
-## Provider-Wahl
+## Provider
 
-| Anforderung | Provider | Begründung |
-|---|---|---|
-| Schaubild mit wenig Text | Gemini | Günstiger, ruhigere Farbwirkung |
-| Schaubild mit vielen Labels (Tabelle, Diagramm) | OpenAI hohe Qualität | Bessere Text-Treue, sauberere Kanten |
-| Img2img-Korrektur | Gemini | OpenAI unterstützt aktuell kein Img2img |
-| Illustrative Szenen | Gemini | Ausreichend, OpenAI ist teurer |
+**Immer Gemini.** Schneller als OpenAI (5 bis 10 Sekunden statt 30 Sekunden bei `quality=high`), rendert deutsche Umlaute und Tabellen-Layouts zuverlässig, ausreichend gute Qualität bei wissenschaftlicher Diagramm-Optik. Img2img-Korrekturen funktionieren nur mit Gemini.
+
+OpenAI nur als **Fallback** in einem Spezialfall: wenn Gemini bei einem konkreten Schaubild nach zwei Iterationen die gleiche spezifische Schwäche zeigt (z.B. extrem text-heavy Vergleichstabelle mit mehr als 20 Zellen, bei der Gemini wiederholt Labels vertauscht). Standardmäßig nicht nötig.
 
 ## Befehl
 
@@ -56,14 +53,46 @@ keep all other elements identical, do not change layout, colors, or arrows" \
   -o ./schaubilder/A-fix.png
 ```
 
-## Vier Diagramm-Typen, die ich bereits getestet habe
+## Vier getestete Diagramm-Typen
 
-| Typ | Template | Beste Provider-Wahl |
-|---|---|---|
-| Hub-Spoke (Komponenten) | `templates/schaubild-prompts/hub-spoke.md` | Gemini |
-| Vergleichstabelle | `templates/schaubild-prompts/vergleichstabelle.md` | OpenAI hohe Qualität |
-| Kreislauf | `templates/schaubild-prompts/kreislauf.md` | Gemini |
-| 3-Schritt-Prozess | `templates/schaubild-prompts/prozess-3-schritt.md` | Gemini |
+| Typ | Template |
+|---|---|
+| Hub-Spoke (Komponenten) | `templates/schaubild-prompts/hub-spoke.md` |
+| Vergleichstabelle | `templates/schaubild-prompts/vergleichstabelle.md` |
+| Kreislauf | `templates/schaubild-prompts/kreislauf.md` |
+| 3-Schritt-Prozess | `templates/schaubild-prompts/prozess-3-schritt.md` |
+
+Custom-Layouts (z.B. 2x2-Matrix, Decision-Tree, Zeitstrahl, Hook-Bild mit Statistik): Prompt freihändig schreiben, Style-Block aus `templates/style-suffix-wissenschaft.md` unten anhängen.
+
+## Label-Präzision: keine zu breiten Begriffe
+
+Wenn du in einer Vergleichs-Visualisierung (Matrix, Decision-Tree, Vergleichstabelle) Berufen, Konzepten oder Tools je ein Verb oder Stichwort zuordnest, prüfe vorher: ist das zugeordnete Stichwort wirklich das ganze Label, oder steckt da ein Sammelbegriff drin?
+
+Beispiel aus Video 02: Der Fachinformatiker hat vier Fachrichtungen (Anwendungsentwicklung, Systemintegration, Daten- und Prozessanalyse, Digitale Vernetzung). "Programmieren" trifft nur eine davon. Wer "Fachinformatiker = programmieren" suggeriert, lügt didaktisch.
+
+Drei Lösungen, wenn das Label zu breit ist:
+
+1. **Splitten**: zeige die zwei oder drei dominanten Sub-Typen separat, statt den Sammelbegriff. In der 2x2-Matrix von Video 02 wurde der Fachinformatiker-Quadrant in zwei Sub-Boxen geteilt: Anwendungsentwicklung und Systemintegration.
+2. **Breiter umformulieren**: statt eines konkreten Verbs ein generischeres Label nehmen, das mehrere Sub-Typen einschließt. Aus "programmieren" wird "Software und Systeme".
+3. **Mündlich auflösen**: im Skript explizit benennen, dass das Label ein Sammelbegriff ist und das gezeigte Verb nur einen Sub-Typ trifft. Bevorzugt die schwächste der drei Lösungen, weil der Zuschauer das Schaubild ohne den Sprechtext nicht versteht.
+
+Faustregel: bei jeder Vergleichs-Visualisierung einmal in jede Box schauen und fragen "ist das wirklich ein Begriff auf gleicher Ebene wie die anderen Boxen?" Wenn nein, splitten oder umformulieren, bevor du generierst.
+
+## Schaubild-Sequenz pro Video
+
+Anzahl und Funktion der Schaubilder pro Video richtet sich nach dem Storytelling-Bogen (`docs/storytelling.md`), mindestens drei pro Video. Typische Sektionstypen und passende Diagramm-Typen:
+
+| Sektionstyp | Typischer Diagramm-Typ |
+|---|---|
+| Hook | Custom-Bild mit der Schlüssel-Statistik oder dem Kontrast des Videos |
+| Abgrenzung / Verwirrung erklären | Vergleichstabelle oder Genealogie-Bild |
+| Hauptdefinition | Hub-Spoke, Matrix, Kreislauf |
+| Mechanismus / Detail | Kreislauf oder Zoom-in auf das Hauptbild |
+| Beispiel / Praxis-Anker | 3-Schritt-Prozess oder Beispiel-Custom |
+| Entscheidungsregel | Decision-Tree oder Hauptbild mit Hervorhebung |
+| CTA / Outro | Schlichtes Custom-Bild mit der Schlussfrage |
+
+Wiederverwendung erlaubt: Hauptbild über zwei Sektionen sichtbar lassen, wenn die zweite Sektion eine Vertiefung der ersten ist.
 
 ## Was nicht geht (gelernt aus Versuchen)
 

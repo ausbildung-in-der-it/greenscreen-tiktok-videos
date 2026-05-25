@@ -1,5 +1,5 @@
 ---
-description: Generiert einen Schaubild-Prompt aus einem der vier Diagramm-Typ-Templates (Hub-Spoke, Vergleichstabelle, Kreislauf, 3-Schritt-Prozess) und führt durch die Bildgenerierung.
+description: Generiert einen Schaubild-Prompt aus einem Diagramm-Typ-Template oder Custom-Layout und führt durch die Bildgenerierung.
 when_to_use: Triggert bei "schaubild erstellen", "diagramm prompt", "schaubild generieren".
 argument-hint: [diagramm-typ] [video-ordner]
 disable-model-invocation: true
@@ -8,59 +8,55 @@ allowed-tools: Bash Read Write
 
 # Schaubild-Prompt erstellen und Bild generieren
 
-Argumente: $ARGUMENTS (optional Diagramm-Typ und/oder Video-Ordner)
+Argumente: $ARGUMENTS (optional Diagramm-Typ und/oder Video-Ordner).
+
+Kanonische Regeln zu Provider, Style-Block, Diagramm-Typen und Schaubild-Sequenz: `docs/schaubild-prompting.md`. Diese Datei beschreibt nur die ausführende Mechanik.
 
 ## 1. Diagramm-Typ wählen
 
-| Typ | Template | Beste für |
-|---|---|---|
-| `hub-spoke` | `templates/schaubild-prompts/hub-spoke.md` | "Was sind die Bausteine von X?" |
-| `vergleichstabelle` | `templates/schaubild-prompts/vergleichstabelle.md` | "Was ist der Unterschied zwischen X und Y?" |
-| `kreislauf` | `templates/schaubild-prompts/kreislauf.md` | "Wie funktioniert X als Prozess?" |
-| `prozess-3-schritt` | `templates/schaubild-prompts/prozess-3-schritt.md` | "Beispiel: so läuft das ab" |
+Templates unter `templates/schaubild-prompts/`:
 
-Wenn nicht aus $ARGUMENTS klar: frag nach.
+- `hub-spoke.md` für "Was sind die Bausteine von X?"
+- `vergleichstabelle.md` für "Was ist der Unterschied zwischen X und Y?"
+- `kreislauf.md` für "Wie funktioniert X als Prozess?"
+- `prozess-3-schritt.md` für "Beispiel: so läuft das ab"
 
-## 2. Variablen sammeln
+Custom-Layouts (2x2-Matrix, Decision-Tree, Zeitstrahl, Hook-Bild, Outro-Bild) schreibst du freihändig.
 
-Lies das passende Template. Frag die Variablen ab.
+Wenn nicht aus $ARGUMENTS klar: frag den User nach dem Typ.
 
-## 3. Prompt zusammenbauen
+## 2. Prompt schreiben
 
-Füll die Variablen ein. Hänge den Style-Block aus `templates/style-suffix-wissenschaft.md` unten an. Speichere den fertigen Prompt unter `videos/NN/prompts/<TYP>.txt`.
+Lies das passende Template (bei Custom-Layout: schreib direkt). Füll Variablen ein. Hänge den Style-Block aus `templates/style-suffix-wissenschaft.md` unten an. Speichere unter `videos/NN/prompts/<X>.txt`.
 
-## 4. Provider wählen
-
-Default: Gemini. Bei Vergleichstabelle oder vielen Labels: OpenAI mit hoher Qualitätsstufe. Begründung kurz dem User mitteilen.
-
-## 5. Generieren
+## 3. Generieren
 
 ```bash
 tools image generate "$(cat ./videos/NN/prompts/X.txt)" \
-  --provider=<gemini|openai> \
+  --provider=gemini \
   --aspect-ratio=1:1 \
   --image-size=2K \
-  --quality=high \
   -o ./videos/NN/schaubilder/X-roh.png
 ```
 
-## 6. Flach kopieren
+## 4. Flach kopieren
 
-Die CLI legt den Output in einem Unterordner ab. Extrahiere die echte Datei:
+Die CLI legt den Output in einem Unterordner ab:
 
 ```bash
 src=$(find ./videos/NN/schaubilder/X-roh.png -name 'image-*' -type f | head -1)
 cp "$src" ./videos/NN/schaubilder/X.${src##*.}
+rm -rf ./videos/NN/schaubilder/X-roh.png
 ```
 
-## 7. Visuell prüfen
+## 5. Visuell prüfen
 
-Öffne im Finder. Prüfe Umlaute, keine Sub-Texte, disziplinierte Farben, lesbar bei Daumennagel.
+Lies die Bilddatei. Prüfe: Umlaute korrekt, kein Sub-Text, Farben diszipliniert, lesbar bei Daumennagel.
 
-## 8. Bei Fehlern: Img2img-Korrektur
+## 6. Bei Fehlern: Img2img-Korrektur
 
 ```bash
-tools image generate "fix German typography: change Xae to Xä, keep all other elements identical" \
+tools image generate "fix German typography: change Xae to Xä, keep all other elements identical, do not change layout, colors, or arrows" \
   --provider=gemini \
   --aspect-ratio=1:1 \
   --image-size=2K \
@@ -68,4 +64,4 @@ tools image generate "fix German typography: change Xae to Xä, keep all other e
   -o ./videos/NN/schaubilder/X-fix.png
 ```
 
-Befolge `docs/schaubild-prompting.md` und `docs/stil-regeln.md`.
+Nach zwei gescheiterten Iterationen: dem User zeigen, was vorliegt, und kurz fragen wie weiter (anderer Prompt, Text reduzieren, Layout anpassen).

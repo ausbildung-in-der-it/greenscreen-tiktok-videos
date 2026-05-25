@@ -2,56 +2,83 @@
 
 Wiederverwendbare Strukturen. Pick den, der zum Thema passt.
 
-## Bogen A: Aufklärungs-Pattern (Default, 60s)
+## Grundregel: Schaubild in jeder Sektion
+
+In diesem Setup steht der Sprecher **immer** vor einem Schaubild (Greenscreen-Cutout). Es gibt **keine** Vollbild-Sektionen ohne visuellen Anker. Jede Sektion eines Bogens braucht ein eigenes oder ein wiederverwendetes Schaubild.
+
+Anzahl Schaubilder pro Video variiert nach Bogen, aber **mindestens drei**. Faustregel: alle 10 bis 20 Sekunden ein neues Bild oder eine sichtbare Veränderung am Bild, damit die Aufmerksamkeit nicht abreißt.
+
+Wiederverwenden ist erlaubt. Zum Beispiel kann das Hauptschaubild über zwei Sektionen sichtbar bleiben, wenn die zweite Sektion eine Vertiefung der ersten ist (Erklärung dann Entscheidungsregel).
+
+## Bogen A: Aufklärungs-Pattern (Default, 60s, 4 bis 5 Schaubilder)
 
 Bewährt bei Missverständnis-Themen. Du deckst eine falsche Annahme auf, klärst sie auf, gibst Praxis-Beispiel.
 
-| Sek | Sektion | Inhalt |
+| Sek | Sektion | Schaubild |
 |---|---|---|
-| 0 bis 5 | Hook | Pattern-Interrupt mit Missverständnis. "Du denkst X. Falsch." |
-| 5 bis 20 | Abgrenzung | Was ist es **nicht**, und wie unterscheidet es sich? |
-| 20 bis 36 | Definition | Was ist es **wirklich**? Mit Quellen-Verweis. |
-| 36 bis 50 | Mechanismus | Wie funktioniert es **konkret**? |
-| 50 bis 58 | Praxis-Anker | Ein konkretes Alltagsbeispiel. |
-| 58 bis 60 | CTA | "Folg mir, ich zeig dir, wie..." |
+| 0 bis 5 | Hook (Missverständnis benennen) | Hook-Bild: das Missverständnis visualisiert |
+| 5 bis 20 | Abgrenzung (was ist es nicht?) | Vergleichstabelle oder Vorher-Nachher |
+| 20 bis 36 | Definition (was ist es wirklich?) | Haupt-Diagramm: Hub-Spoke, Kreislauf, oder Matrix |
+| 36 bis 50 | Mechanismus (wie funktioniert es?) | Prozess-Schaubild oder Zoom-in auf das Haupt-Diagramm |
+| 50 bis 58 | Praxis-Anker (Alltagsbeispiel) | Beispiel-Bild oder Hauptbild bleibt |
+| 58 bis 60 | CTA | Outro-Bild oder Hauptbild bleibt |
 
-Sprech-Tempo: 2,5 bis 3 Wörter pro Sekunde. Für 60 s rund 150 bis 180 Wörter.
+Sprech-Tempo: 2,5 bis 3 Wörter pro Sekunde. Für 60 s rund 150 bis 180 Wörter total.
 
-## Bogen B: Historie-Pattern (60 bis 90s)
+## Bogen B: Historie-Pattern (60 bis 90s, 5 bis 6 Schaubilder)
 
 Bei Themen, deren Begriffsgeschichte überraschend ist. Beispiel: "KI-Agenten sind 50 Jahre alt."
 
-| Sek | Sektion | Inhalt |
+| Sek | Sektion | Schaubild |
 |---|---|---|
-| 0 bis 8 | Hook | Behauptung mit Datum. "Der Begriff X ist älter als das iPhone." |
-| 8 bis 25 | Ur-Anker | Erste verlässliche Definition, mit Zitat und Datum. |
-| 25 bis 50 | Zwischenstationen | Schnellschnitt mit Datum und Stichwort, je 3 Sekunden. |
-| 50 bis 70 | Wendepunkt | Ein einzelnes Ereignis, das alles veränderte. |
-| 70 bis 85 | Heute | Was hat sich seitdem etabliert? |
-| 85 bis 90 | CTA | "Folg mir, im nächsten Video zeige ich..." |
+| 0 bis 8 | Hook (Datum + Behauptung) | Hook-Bild: das überraschende Datum visualisiert |
+| 8 bis 25 | Ur-Anker (erste Definition) | Zitat-Karte mit Quelle |
+| 25 bis 50 | Zwischenstationen | Zeitstrahl-Schaubild |
+| 50 bis 70 | Wendepunkt | Zoom-in auf das Schlüssel-Ereignis |
+| 70 bis 85 | Heute (etablierter Stand) | Aktuelles Diagramm |
+| 85 bis 90 | CTA | Outro-Bild |
 
-## Bogen C: Vergleichs-Pattern (45 bis 60s)
+## Bogen C: Vergleichs-Pattern (45 bis 60s, 3 bis 5 Schaubilder)
 
-Wenn zwei ähnliche Konzepte verwechselt werden.
+Wenn zwei oder mehr ähnliche Konzepte verwechselt werden.
 
-| Sek | Sektion | Inhalt |
+| Sek | Sektion | Schaubild |
 |---|---|---|
-| 0 bis 5 | Hook | "Viele verwechseln X und Y." |
-| 5 bis 30 | Vergleichstabelle | 3 bis 5 Vergleichspunkte, klar getrennt. |
-| 30 bis 50 | Wann was nutzen? | Praktische Entscheidungsregel. |
-| 50 bis 60 | CTA | "Welches setzt du? Schreib es in die Kommentare." |
+| 0 bis 5 | Hook (Verwechslung benennen) | Hook-Bild: die verwechselten Konzepte als Cluster |
+| 5 bis 15 | Verwirrung erklären (warum?) | Kontext-Schaubild: z.B. Genealogie oder Reform-Datum |
+| 15 bis 45 | Hauptvergleich | Vergleichstabelle, Matrix, oder Cluster-Diagramm |
+| 45 bis 55 | Entscheidungsregel | Entscheidungsbaum oder Hauptbild mit Hervorhebung |
+| 55 bis 60 | CTA | Outro-Bild oder Hauptbild bleibt |
 
-## Bogen D: How-to-Pattern (60 bis 120s)
+## Bogen D: How-to-Pattern (60 bis 120s, 5 bis 7 Schaubilder)
 
 Für konkrete Anleitungen ("So baust du deinen ersten Agent").
 
-| Sek | Sektion | Inhalt |
+| Sek | Sektion | Schaubild |
 |---|---|---|
-| 0 bis 5 | Hook mit Versprechen | "In 60 Sekunden baust du..." |
-| 5 bis 15 | Vorbereitung | Was brauchst du? |
-| 15 bis 80 | Schritte 1 bis 3 | Je 20 bis 25 Sekunden, mit visueller Demo. |
-| 80 bis 100 | Ergebnis und Erweiterung | Was du jetzt damit machen kannst. |
-| 100 bis 120 | CTA | "Folg mir für mehr." |
+| 0 bis 5 | Hook mit Versprechen | Endergebnis-Bild als Teaser |
+| 5 bis 15 | Vorbereitung | Zutaten-Liste oder Setup-Bild |
+| 15 bis 80 | Schritte 1 bis 3 | Pro Schritt ein eigenes Schaubild |
+| 80 bis 100 | Ergebnis und Erweiterung | Vorher-Nachher oder Endbild |
+| 100 bis 120 | CTA | Outro-Bild |
+
+## "Was du sagst" sind ausformulierte Sätze, keine Schlagworte
+
+Stichpunkte wie "Hardware aufbauen" oder "Strom anschließen" sind beim freien Sprechen leere Trigger. Wenn du sie aussprichst, bleibt beim Zuschauer nichts hängen.
+
+Das Skript enthält **ausformulierte Sprechsätze** pro Sektion. Das ist nicht Teleprompter-Text, sondern eine Sprech-Vorlage mit Substanz: konkrete Beispiele, Zahlen, Arbeitgeber-Namen, Bilder im Kopf. Du liest das Skript vor der Aufnahme einmal durch, sprichst dann frei. Aber du sprichst die Substanz, nicht das Schlagwort.
+
+**Beispiel schlecht (Stichpunkt ohne Substanz):**
+
+> "IT-System-Elektroniker, baut Hardware auf, schließt Strom an."
+
+**Beispiel gut (Sprechsatz mit Substanz):**
+
+> "Der IT-System-Elektroniker arbeitet zum Beispiel im Rechenzentrum eines Cloud-Anbieters. Er montiert Server-Racks, verlegt Netzwerkkabel zwischen den Schränken und prüft, dass die Stromversorgung normgerecht abgesichert ist. Klassische Arbeitgeber: Systemhäuser, Telekommunikations-Anbieter, große Industrie-IT, Krankenhaus-IT."
+
+Drei Sätze, ca. 50 Wörter, ca. 20 Sekunden Sprech-Zeit. Konkrete Bilder im Kopf des Zuschauers. Genau das ist der Standard.
+
+Pro Sektion sollten die Sprechsätze die Länge der Sektion ausfüllen, mit kleinem Puffer. Bei 60 s Video also 150 bis 180 Wörter total, verteilt auf die Sektionen.
 
 ## Hook-Regeln (egal welcher Bogen)
 
@@ -59,6 +86,7 @@ Für konkrete Anleitungen ("So baust du deinen ersten Agent").
 - **Pattern-Interrupt**: Behauptung, Frage, Kontrast. Nicht "Heute erkläre ich...".
 - **Direkte Ansprache**: "Du..." statt "Man...".
 - **Konkret**: Datum, Zahl, Name. Nicht vage.
+- **Hook-Schaubild zeigt das Versprechen**: nicht den Titel des Videos, sondern visuell, worum es geht. Wer das Bild allein sieht, soll neugierig werden.
 
 ## CTA-Regeln
 
@@ -66,3 +94,4 @@ Für konkrete Anleitungen ("So baust du deinen ersten Agent").
 - "Folg mir, [konkretes Versprechen]." schlägt "Like und folg!".
 - Auf Anschluss-Video verweisen, wenn vorhanden.
 - Kommentar-Frage stellen, wenn du Engagement willst.
+- Auch im Outro bleibst du vor einem Schaubild, kein Vollbild.
