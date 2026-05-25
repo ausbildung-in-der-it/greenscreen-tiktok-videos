@@ -1,0 +1,31 @@
+Three-step process diagram in German showing a concrete business use case of an AI agent: lead research.
+
+Top center headline in bold mixed case: "Beispiel: Lead-Recherche"
+
+Below the headline, three equally sized rounded rectangles arranged horizontally left to right, connected by simple dark gray directional arrows pointing right between them. Each box contains ONLY a short main label and a single small icon, NO sub-text, NO explanation sentences.
+
+Step 1 box (light blue #DBEAFE fill, dark text):
+- Label at top: "Auftrag"
+- One small dark icon below the label: a simple line-art speech bubble
+
+Step 2 box in the middle (dark blue #1E3A8A fill, white text):
+- Label at top: "Agent arbeitet"
+- Three small white line-art icons arranged in a horizontal row below the label: a browser window icon, a magnifying glass icon, and a small contact-card icon. NO additional text labels under these icons.
+
+Step 3 box (light blue #DBEAFE fill, dark text):
+- Label at top: "Ergebnis"
+- One small dark icon below the label: a simple line-art list/table icon
+
+Render as a clean technical infographic in the style of a scientific paper or textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (4 to 6 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) primary fills with white text and white icons, light blue (#DBEAFE) secondary fills with dark text and dark icons, dark gray (#1F2937) text on light backgrounds
+- Thin dark gray connecting arrows (1.5 to 2 pixel) with simple triangular arrowheads
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and box labels
+- Icons are simple geometric line-art, NO photorealistic or 3D rendering
+- Each box contains ONLY the label and icons, absolutely NO descriptive sub-text or explanation sentences
+- Generous white space, perfectly grid-aligned, symmetric horizontal composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters

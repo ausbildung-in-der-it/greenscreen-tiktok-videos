@@ -1,0 +1,28 @@
+Technical architecture diagram of an AI agent for a German-language audience, based on Anthropic's four-component model.
+
+Top center headline in bold mixed case: "Komponenten eines KI-Agenten"
+
+Central large rounded rectangle filled with dark blue (#1E3A8A) labeled "KI-Agent" in white bold text at the top. Inside this central container, three equally sized sub-component boxes arranged horizontally in a single row, with light blue (#DBEAFE) fill and dark text. Each box contains ONLY one short label, nothing else, NO sub-text:
+
+- Left box: "Sprachmodell"
+- Middle box: "Vorgaben"
+- Right box: "Werkzeuge"
+
+Outside and below the central container, a separate light gray (#E5E7EB) rounded rectangle spanning a similar width, labeled "Umgebung" in dark text.
+
+Two thin dark gray arrows connect the central container with the Umgebung box:
+- one arrow from Umgebung upward into Sprachmodell, with a small label "Eingaben" next to it
+- one arrow from Werkzeuge downward into Umgebung, with a small label "Aktionen" next to it
+
+Render as a clean technical infographic in the style of a scientific paper or textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (4 to 6 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) primary container with white text, light blue (#DBEAFE) secondary boxes with dark text, light gray (#E5E7EB) tertiary, dark gray (#1F2937) text on light backgrounds
+- Thin dark gray connecting lines (1.5 to 2 pixel) with simple triangular arrowheads
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headings and box labels
+- Each box contains ONLY a short main label, absolutely NO sub-text, NO descriptive sub-lines, NO secondary captions
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>{{VIDEO_TITLE}}, Spickzettel</title>
+<style>
+  :root {
+    --primary: #1E3A8A;
+    --secondary: #DBEAFE;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --bg: #FFFFFF;
+    --border: #E5E7EB;
+    --nuance-bg: #FEF9E7;
+    --nuance-border: #F59E0B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 32px 96px;
+  }
+  h1 { font-size: 32px; margin: 0 0 8px; color: var(--primary); }
+  .lead { font-size: 17px; color: var(--muted); margin: 0 0 32px; }
+  nav {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 12px 16px; background: var(--secondary);
+    border-radius: 8px; margin-bottom: 40px; font-size: 14px;
+  }
+  nav a {
+    color: var(--primary); text-decoration: none;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  nav a:hover { background: rgba(30,58,138,0.1); }
+  section {
+    margin-bottom: 56px; padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  .timing {
+    display: inline-block; background: var(--primary); color: white;
+    font-weight: 600; font-size: 13px; padding: 4px 10px;
+    border-radius: 4px; margin-bottom: 8px; letter-spacing: 0.5px;
+  }
+  h2 { font-size: 24px; margin: 4px 0 16px; color: var(--text); }
+  .visual {
+    display: flex; gap: 24px; align-items: flex-start; margin: 16px 0 20px;
+  }
+  .visual img {
+    width: 280px; height: 280px; object-fit: contain;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: white; flex-shrink: 0;
+  }
+  .bullets { flex: 1; }
+  .bullets h3 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px;
+    color: var(--muted); margin: 0 0 8px; font-weight: 600;
+  }
+  .bullets ul { margin: 0 0 16px; padding-left: 20px; }
+  .bullets li { margin-bottom: 6px; font-size: 16px; }
+  .bullets li strong { color: var(--primary); }
+  .nuance {
+    background: var(--nuance-bg); border-left: 4px solid var(--nuance-border);
+    padding: 14px 18px; border-radius: 4px; margin-top: 16px; font-size: 14px;
+  }
+  .nuance strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #92400E; margin-bottom: 6px;
+  }
+  .nuance p { margin: 0 0 8px; }
+  .nuance p:last-child { margin-bottom: 0; }
+  .quellen {
+    background: #F9FAFB; padding: 24px 28px; border-radius: 8px;
+  }
+  .quellen h2 { margin-top: 0; color: var(--primary); }
+  .quellen ul { padding-left: 18px; margin: 0; }
+  .quellen li { margin-bottom: 10px; font-size: 14px; }
+  .quellen a { color: var(--primary); word-break: break-word; }
+  .quellen .anbieter {
+    font-weight: 600; text-transform: uppercase; font-size: 12px;
+    letter-spacing: 0.8px; color: var(--muted);
+    margin-top: 18px; margin-bottom: 8px;
+  }
+  .praemisse {
+    background: var(--primary); color: white;
+    padding: 24px 28px; border-radius: 8px; margin-bottom: 40px; font-size: 16px;
+  }
+  .praemisse strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 8px; opacity: 0.8;
+  }
+  @media (max-width: 700px) {
+    .visual { flex-direction: column; }
+    .visual img { width: 100%; height: auto; max-width: 360px; }
+    body { padding: 24px 16px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>{{VIDEO_TITLE}}</h1>
+<p class="lead">{{VIDEO_LEAD}}</p>
+
+<nav>
+  <a href="#hook">Hook</a>
+  <a href="#sektion-1">Sektion 1</a>
+  <a href="#sektion-2">Sektion 2</a>
+  <a href="#sektion-3">Sektion 3</a>
+  <a href="#praxis">Praxis</a>
+  <a href="#outro">Outro</a>
+  <a href="#quellen">Quellen</a>
+</nav>
+
+<div class="praemisse">
+  <strong>Prämisse</strong>
+  {{PRAEMISSE}}
+</div>
+
+<section id="hook">
+  <span class="timing">0 bis 5 Sekunden, Hook</span>
+  <h2>Du im Vollbild, kein Schaubild</h2>
+  <div class="bullets">
+    <h3>Was du sagst</h3>
+    <ul>
+      <li>{{HOOK_LINE_1}}</li>
+      <li>{{HOOK_LINE_2}}</li>
+    </ul>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>{{HOOK_NUANCE}}</p>
+  </div>
+</section>
+
+<section id="sektion-1">
+  <span class="timing">5 bis 20 Sekunden, Abgrenzung</span>
+  <h2>{{SEKTION_1_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_1}}" alt="{{SCHAUBILD_1_ALT}}">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>{{S1_BULLET_1}}</li>
+        <li>{{S1_BULLET_2}}</li>
+        <li>{{S1_BULLET_3}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>{{S1_NUANCE_TITLE}}</strong>
+    <p>{{S1_NUANCE_TEXT}}</p>
+  </div>
+</section>
+
+<section id="sektion-2">
+  <span class="timing">20 bis 36 Sekunden, Was ist es?</span>
+  <h2>{{SEKTION_2_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_2}}" alt="{{SCHAUBILD_2_ALT}}">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>{{S2_BULLET_1}}</li>
+        <li>{{S2_BULLET_2}}</li>
+        <li>{{S2_BULLET_3}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>{{S2_NUANCE_TITLE}}</strong>
+    <p>{{S2_NUANCE_TEXT}}</p>
+  </div>
+</section>
+
+<section id="sektion-3">
+  <span class="timing">36 bis 50 Sekunden, Wie arbeitet er?</span>
+  <h2>{{SEKTION_3_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_3}}" alt="{{SCHAUBILD_3_ALT}}">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>{{S3_BULLET_1}}</li>
+        <li>{{S3_BULLET_2}}</li>
+        <li>{{S3_BULLET_3}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>{{S3_NUANCE_TITLE}}</strong>
+    <p>{{S3_NUANCE_TEXT}}</p>
+  </div>
+</section>
+
+<section id="praxis">
+  <span class="timing">50 bis 58 Sekunden, Praxis-Anker</span>
+  <h2>{{PRAXIS_TITLE}}</h2>
+  <div class="visual">
+    <img src="schaubilder/{{SCHAUBILD_4}}" alt="{{SCHAUBILD_4_ALT}}">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>{{P_BULLET_1}}</li>
+        <li>{{P_BULLET_2}}</li>
+        <li>{{P_BULLET_3}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>{{P_NUANCE_TITLE}}</strong>
+    <p>{{P_NUANCE_TEXT}}</p>
+  </div>
+</section>
+
+<section id="outro">
+  <span class="timing">58 bis 60 Sekunden, CTA</span>
+  <h2>Outro, du im Vollbild</h2>
+  <div class="bullets">
+    <h3>Was du sagst</h3>
+    <ul>
+      <li>{{CTA_LINE}}</li>
+    </ul>
+  </div>
+</section>
+
+<section id="quellen" class="quellen">
+  <h2>Quellen</h2>
+  <p class="anbieter">{{QUELLEN_GRUPPE_1}}</p>
+  <ul>
+    <li><a href="{{QUELLE_URL_1}}">{{QUELLE_TITEL_1}}</a>, {{QUELLE_BESCHREIBUNG_1}}</li>
+  </ul>
+</section>
+
+</body>
+</html>

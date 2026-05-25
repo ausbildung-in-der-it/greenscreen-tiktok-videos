@@ -1,0 +1,40 @@
+Two-column comparison table in German for a clean infographic.
+
+Top center headline in bold mixed case: "Chatbot vs. KI-Agent"
+
+Below the headline, a clean two-column table with thin dark gray borders. The leftmost column contains attribute labels in regular gray text. Two main columns to its right have dark blue (#1E3A8A) header cells with white bold text. Body cells alternate between light blue (#DBEAFE) and white fills with dark text. Every cell contains only a short label, NO sub-text, NO explanations.
+
+Column headers:
+- (leftmost): empty
+- middle: "Chatbot"
+- right: "KI-Agent"
+
+Four rows below the header row, with attribute label on far left and one short label per cell:
+
+Row 1 attribute label "Steuerung":
+- middle cell: "Mensch tippt"
+- right cell: "Entscheidet selbst"
+
+Row 2 attribute label "Werkzeuge":
+- middle cell: "keine"
+- right cell: "Browser, Code, Datenbank"
+
+Row 3 attribute label "Ablauf":
+- middle cell: "Frage → Antwort"
+- right cell: "Schleife"
+
+Row 4 attribute label "Ziel":
+- middle cell: "wartet"
+- right cell: "verfolgt Ziel"
+
+Render as a clean technical infographic in the style of a scientific paper or textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp rectangular table cells with thin dark gray borders (1.5 pixel)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) header fills with white text, light blue (#DBEAFE) body cell fills with dark text, dark gray (#1F2937) text on white
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and column headers, regular weight for cells
+- Every cell contains ONLY a short label, absolutely NO sub-text or descriptive sub-lines
+- Generous white space around the table, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations

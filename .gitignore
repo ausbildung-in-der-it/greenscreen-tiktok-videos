@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+*.log
+.DS_Store
+
+# Generierte Hilfs-Ordner aus tools image generate
+# (die enthalten image-timestamped Files plus index.json, wir behalten nur die flachen Outputs)
+*-gemini.png/
+*-openai.png/
+*-clean-gemini.png/
+*-harness-gemini.png/
+*-anthropic-gemini.png/
+
+# Editor
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>KI-Agent erklärt, Spickzettel</title>
+<style>
+  :root {
+    --primary: #1E3A8A;
+    --secondary: #DBEAFE;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --bg: #FFFFFF;
+    --border: #E5E7EB;
+    --nuance-bg: #FEF3C7;
+    --nuance-border: #F59E0B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 32px 96px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    color: var(--primary);
+  }
+  .lead {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--secondary);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+  nav a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  nav a:hover { background: rgba(30,58,138,0.1); }
+  section {
+    margin-bottom: 56px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  .timing {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-size: 24px;
+    margin: 4px 0 16px;
+    color: var(--text);
+  }
+  .visual {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin: 16px 0 20px;
+  }
+  .visual img {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+    flex-shrink: 0;
+  }
+  .bullets {
+    flex: 1;
+  }
+  .bullets h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .bullets ul {
+    margin: 0 0 16px;
+    padding-left: 20px;
+  }
+  .bullets li {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+  .bullets li strong {
+    color: var(--primary);
+  }
+  .nuance {
+    background: #FEF9E7;
+    border-left: 4px solid var(--nuance-border);
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .nuance strong {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #92400E;
+    margin-bottom: 6px;
+  }
+  .nuance p { margin: 0 0 8px; }
+  .nuance p:last-child { margin-bottom: 0; }
+  .quellen {
+    background: #F9FAFB;
+    padding: 24px 28px;
+    border-radius: 8px;
+  }
+  .quellen h2 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  .quellen ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .quellen li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .quellen a {
+    color: var(--primary);
+    word-break: break-word;
+  }
+  .quellen .anbieter {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  .praemisse {
+    background: var(--primary);
+    color: white;
+    padding: 24px 28px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+  .praemisse strong {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+  @media (max-width: 700px) {
+    .visual { flex-direction: column; }
+    .visual img { width: 100%; height: auto; max-width: 360px; }
+    body { padding: 24px 16px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>KI-Agent erklärt</h1>
+<p class="lead">Spickzettel für dein 60-Sekunden-TikTok. Stichpunkte zum freien Sprechen, plus Nuancen für Rückfragen.</p>
+
+<nav>
+  <a href="#hook">Hook</a>
+  <a href="#schaubild-b">B Vergleich</a>
+  <a href="#schaubild-a">A Komponenten</a>
+  <a href="#schaubild-c">C Arbeitszyklus</a>
+  <a href="#schaubild-d">D Beispiel</a>
+  <a href="#outro">Outro</a>
+  <a href="#quellen">Quellen</a>
+</nav>
+
+<div class="praemisse">
+  <strong>Prämisse</strong>
+  Ein KI-Agent ist kein besserer Chatbot, sondern ein anderes Werkzeug. Während du mit einem Chatbot redest, arbeitet ein Agent für dich, mit eigenen Werkzeugen, in einer Schleife, bis ein Ziel erreicht ist. Für Unternehmer ist das der eigentliche Wendepunkt: nicht KI, die antwortet, sondern KI, die Aufgaben übernimmt.
+</div>
+
+<section id="hook">
+  <span class="timing">0 bis 5 Sekunden, Hook</span>
+  <h2>Du im Vollbild, kein Schaubild</h2>
+  <div class="bullets">
+    <h3>Was du sagst</h3>
+    <ul>
+      <li>Du nutzt ChatGPT. Du denkst, das ist ein KI-Agent. <strong>Falsch.</strong></li>
+      <li>Direkt in die Kamera, kurzer Augenkontakt.</li>
+    </ul>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>ChatGPT ist je nach Konfiguration ein Chatbot, ein Copilot oder ein Agent. Das Wort "ChatGPT" steht hier stellvertretend für die klassische Chat-Nutzung. Wer den Agent-Modus, Operator oder eigene Custom GPTs mit Tools nutzt, ist näher am Agent als ans klassische Chatten.</p>
+  </div>
+</section>
+
+<section id="schaubild-b">
+  <span class="timing">5 bis 20 Sekunden, Abgrenzung</span>
+  <h2>Chatbot vs. KI-Agent</h2>
+  <div class="visual">
+    <img src="schaubilder/B-clean.jpeg" alt="Vergleichstabelle Chatbot vs KI-Agent">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>Chatbot wartet, Agent handelt.</li>
+        <li><strong>Steuerung:</strong> du tippst, oder er entscheidet selbst.</li>
+        <li><strong>Werkzeuge:</strong> keine, oder Browser, Code, Datenbank.</li>
+        <li><strong>Ablauf:</strong> Frage und Antwort, oder Schleife.</li>
+        <li><strong>Ziel:</strong> wartet ab, oder verfolgt ein Ziel.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance: die Grenze verschwimmt</strong>
+    <p>Moderne Chatbots haben Werkzeuge integriert. ChatGPT kann Webseiten durchsuchen, Bilder erzeugen, Code ausführen. Claude.ai kann auf MCP-Server zugreifen. Die Tabelle zeigt also den klassischen Chatbot, nicht jeden heutigen Assistenten.</p>
+    <p>Was klassische Chatbots auch heute noch nicht haben: ein <strong>persistentes Dateisystem</strong>, einen <strong>eigenen Loop ohne deine Bestätigung</strong>, und das <strong>Zerlegen einer Aufgabe in viele Schritte</strong>, die nacheinander ausgeführt werden. Das macht einen echten Agent aus.</p>
+    <p>Faustregel: Wenn du nach jedem Zwischenschritt selbst eingreifst, ist es ein Copilot. Wenn das System eigenständig zehn Schritte hintereinander macht und am Ende ein Ergebnis liefert, ist es ein Agent.</p>
+  </div>
+</section>
+
+<section id="schaubild-a">
+  <span class="timing">20 bis 36 Sekunden, Was ist es?</span>
+  <h2>Die Komponenten eines KI-Agenten</h2>
+  <div class="visual">
+    <img src="schaubilder/A-harness.jpeg" alt="Komponenten-Diagramm nach Anthropic: Sprachmodell, Harness, Werkzeuge, Umgebung">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>So definiert das <strong>Anthropic,</strong> der Hersteller von Claude.</li>
+        <li>Drei Bausteine plus die Umgebung, in der er arbeitet.</li>
+        <li><strong>Sprachmodell:</strong> das Hirn, das nachdenkt.</li>
+        <li><strong>Harness</strong> (sprich: "Hahrness"): das Regelwerk, was er darf und nicht darf.</li>
+        <li><strong>Werkzeuge:</strong> Browser, E-Mail, deine Buchhaltung.</li>
+        <li><strong>Umgebung:</strong> deine Dateien, dein Posteingang, dein Computer.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Was ist "Harness" konkret?</strong>
+    <p>Der englische Begriff "Harness" heißt wörtlich Geschirr (wie bei einem Pferd). Bei einem KI-Agenten ist es das Geschirr, das dem Sprachmodell sagt, in welche Richtung es ziehen darf. Anthropic definiert es als <em>"the instructions, and the guardrails, that the model operates under"</em>.</p>
+    <p><strong>Vier konkrete Beispiele aus dem echten Leben:</strong></p>
+    <p>1. <strong>Rolle und Tonalität:</strong> "Du bist der Support-Agent von Müller GmbH. Antworte auf Deutsch, immer per Du, freundlich aber direkt."</p>
+    <p>2. <strong>Erlaubnis-Regel:</strong> "Du darfst E-Mails lesen, aber niemals selbst eine versenden, ohne dass ich es vorher freigebe."</p>
+    <p>3. <strong>Begrenzung:</strong> "Mache höchstens 10 Schritte, dann melde dich bei mir mit einem Zwischenstand."</p>
+    <p>4. <strong>Sicherheits-Leitplanke:</strong> "Wenn ein Kunde nach Bankdaten oder Passwörtern fragt, antworte nicht selbst, sondern leite an einen Menschen weiter."</p>
+    <p>Praktisch findest du das Harness in einem <em>System-Prompt</em>, in Custom-Instructions, in der Konfiguration einer Agent-App, oder als separate Datei (z.B. CLAUDE.md bei Claude Code). Es ist <strong>nicht der Code</strong> des Modells, sondern die Anleitung, mit der das Modell startet.</p>
+    <p><strong>OpenAI</strong> nennt das Gleiche im <em>Practical Guide to Building Agents</em> "Instructions". Inhaltlich identisch, andere Bezeichnung.</p>
+    <p><strong>Warum kein deutsches Wort?</strong> Weil "Vorgaben" oder "Leitplanken" zu eng sind. Harness umfasst <em>beides</em>: was der Agent tun soll <em>und</em> was er nicht tun darf. Im englischen Original ist das ein etablierter Fachbegriff, der zunehmend auch im deutschen KI-Diskurs verwendet wird.</p>
+    <p><strong>Was du in anderen Erklär-Videos siehst und was wir hier bewusst weggelassen haben:</strong> "Wahrnehmung" und "Gedächtnis" als eigene Bausteine. Das stammt aus der klassischen KI-Theorie (Russell &amp; Norvig 1995). Es ist nicht falsch, nur eben nicht die Sprache, die Anthropic heute selbst verwendet.</p>
+  </div>
+</section>
+
+<section id="schaubild-c">
+  <span class="timing">36 bis 50 Sekunden, Wie arbeitet er?</span>
+  <h2>Der Arbeitszyklus</h2>
+  <div class="visual">
+    <img src="schaubilder/C-clean.jpeg" alt="Arbeitszyklus eines KI-Agenten: Ziel, Denken, Handeln, Beobachten">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li><strong>Ziel setzen.</strong></li>
+        <li><strong>Nachdenken,</strong> was als Nächstes nötig ist.</li>
+        <li><strong>Handeln,</strong> ein Werkzeug aufrufen.</li>
+        <li><strong>Beobachten,</strong> ob es geklappt hat.</li>
+        <li>Wieder von vorn. Bis das Ziel erreicht ist.</li>
+        <li>Diese Schleife ist der eigentliche Unterschied.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance: das nennt sich ReAct</strong>
+    <p>In der Forschung heißt diese Schleife "ReAct" (Reasoning and Acting), beschrieben von Yao et al. 2022 bei Google Research. Anthropic hat 2025 die Beschreibung modernisiert zu "gather context, take action, verify work, repeat". OpenAI nennt es im Agents SDK schlicht "the runtime loop".</p>
+    <p>Drei verschiedene Begriffe, ein Konzept. Im Video brauchst du keinen Fachbegriff zu nennen. Wer es wissen will, fragt in den Kommentaren nach.</p>
+    <p>Wichtige Eigenschaft: der Agent kann <strong>aus Fehlern lernen und korrigieren</strong>, weil er nach jedem Schritt beobachtet, was rauskam. Ein Chatbot ohne Loop kann das nicht. Wenn die erste Antwort falsch ist, bleibt sie falsch.</p>
+  </div>
+</section>
+
+<section id="schaubild-d">
+  <span class="timing">50 bis 58 Sekunden, Praxis-Anker</span>
+  <h2>Beispiel: Lead-Recherche</h2>
+  <div class="visual">
+    <img src="schaubilder/D-clean.jpeg" alt="Drei Schritte: Auftrag, Agent arbeitet, Ergebnis">
+    <div class="bullets">
+      <h3>Was du sagst</h3>
+      <ul>
+        <li>Du sagst: <em>"Finde mir 20 Handwerker in Berlin."</em></li>
+        <li><strong>Chatbot:</strong> erklärt dir, wie du das machen könntest.</li>
+        <li><strong>Agent:</strong> sucht selbst, sammelt Kontakte, gibt dir die Liste.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance: was ein Agent heute real kann</strong>
+    <p>Lead-Recherche ist ein gutes Einsteiger-Beispiel, weil es konkret und nachvollziehbar ist. Realistische weitere Anwendungen für Selbständige und kleine Firmen:</p>
+    <p><strong>Posteingang:</strong> ein Agent sortiert E-Mails, beantwortet Standard-Anfragen, eskaliert komplexe Fälle an dich.<br>
+    <strong>Buchhaltung:</strong> Belege sammeln, zuordnen, an den Steuerberater übergeben.<br>
+    <strong>Wettbewerbsanalyse:</strong> 20 Konkurrenz-Webseiten lesen, in einer Tabelle vergleichen.<br>
+    <strong>Content-Recherche:</strong> Themen für deinen Newsletter recherchieren, Quellen zitieren.</p>
+    <p>Wichtig: Heute (Stand 2026) sind Agents in vielen Bereichen noch nicht voll autonom. Du gibst meist eine Aufgabe, der Agent macht 70 bis 90 Prozent, du prüfst am Ende. Das ist trotzdem ein massiver Hebel.</p>
+  </div>
+</section>
+
+<section id="outro">
+  <span class="timing">58 bis 60 Sekunden, CTA</span>
+  <h2>Outro, du im Vollbild</h2>
+  <div class="bullets">
+    <h3>Was du sagst</h3>
+    <ul>
+      <li>Folg mir, ich zeig dir, wie du das in deiner Firma einsetzt.</li>
+      <li>Ruhig, freundlich, einladend. Keine Marktschreier-Geste.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="quellen" class="quellen">
+  <h2>Quellen</h2>
+
+  <p class="anbieter">Anthropic, Hersteller von Claude</p>
+  <ul>
+    <li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>, fundamentaler Engineering-Beitrag, Definition: "LLMs using tools based on environmental feedback in a loop"</li>
+    <li><a href="https://www.anthropic.com/research/trustworthy-agents">Trustworthy Agents in Practice</a>, aktuelle Vier-Komponenten-Sicht: Model, Harness, Tools, Environment</li>
+    <li><a href="https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk">Building Agents with the Claude Agent SDK</a>, September 2025, modernisierte Loop-Beschreibung "gather context, take action, verify work, repeat"</li>
+    <li><a href="https://claude.com/blog/seeing-like-an-agent">Seeing like an agent</a>, April 2026, Designprinzipien für Agent-Tools</li>
+  </ul>
+
+  <p class="anbieter">OpenAI, Hersteller von ChatGPT</p>
+  <ul>
+    <li><a href="https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf">A Practical Guide to Building Agents</a>, offizielles Business-PDF mit Drei-Komponenten-Definition: Model, Tools, Instructions</li>
+    <li><a href="https://developers.openai.com/api/docs/guides/agents">Agents SDK Übersicht</a>, "Agents are applications that plan, call tools, collaborate across specialists"</li>
+    <li><a href="https://developers.openai.com/api/docs/guides/agents/define-agents">Agent Definitions</a>, operative Bausteine eines Agenten in der API</li>
+  </ul>
+
+  <p class="anbieter">Akademisch und neutral</p>
+  <ul>
+    <li><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/the-agentic-ai-landscape-and-its-conceptual-foundations_a9d4b451/396cf758-en.pdf">OECD Report: The Agentic AI Landscape</a>, Februar 2026, vergleicht Definitionen verschiedener Anbieter</li>
+    <li><a href="https://www.nngroup.com/articles/definition-ai-agent/">Nielsen Norman Group: A Concrete Definition of an AI Agent</a>, April 2026, gut lesbare UX-Sicht</li>
+    <li><a href="https://arxiv.org/pdf/2505.10468">arXiv 2505.10468: AI Agents vs. Agentic AI</a>, Taxonomie und Abgrenzung</li>
+  </ul>
+</section>
+
+</body>
+</html>
