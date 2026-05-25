@@ -1,53 +1,33 @@
-# Schaubild-Prompt: 3-Schritt-Prozess
+# Diagramm-Typ: Prozess-Schritte (linear)
 
-Drei nebeneinander liegende Boxen, mit Pfeilen verbunden, mittlere Box optional hervorgehoben.
+Mehrere Boxen nebeneinander, mit Pfeilen verbunden, optional mittlere Box hervorgehoben.
 
 ## Wann nutzen
 
-- "So funktioniert das in 3 Schritten"
+- "So funktioniert das in N Schritten"
 - Beispiele und Workflows
-- Input → Verarbeitung → Output
+- Input zu Verarbeitung zu Output
 
 ## Variablen
 
-- `HEADLINE`: z.B. "Beispiel: Lead-Recherche"
-- `STEPS`: genau 3 Labels (je 1 bis 3 Wörter)
-- `ICONS`: 3 einfache Symbole pro Box
+- **Headline**: z.B. "Beispiel: Lead-Recherche"
+- **Schritte**: zwei bis fünf Boxen, je ein kurzes Label (ein bis drei Wörter). Drei ist der Sweet Spot. Mehr als fünf wird auf 1:1 zu eng.
+- **Hervorhebung** (optional): eine Box im Hauptpfad in Primärblau, die anderen in Hellblau, damit der Höhepunkt visuell stark wirkt.
 
-## Prompt-Template
+## Visueller Rahmen
 
-```
-Three-step process diagram in German showing {{TOPIC}}.
+Headline oben zentriert. Darunter gleich große rounded Rectangles horizontal nebeneinander, verbunden durch einfache dunkelgraue Rechts-Pfeile.
 
-Top center headline in bold mixed case: "{{HEADLINE}}"
+Jede Box enthält nur ein kurzes Label, optional ein einzelnes kleines Icon. Keine Sub-Texte. Hervorgehobene Box mit Primärblau-Fill (#1E3A8A) und weißem Text, andere Boxen Hellblau (#DBEAFE) mit dunklem Text.
 
-Below the headline, three equally sized rounded rectangles arranged horizontally
-left to right, connected by simple dark gray directional arrows pointing right
-between them. Each box contains ONLY a short main label and a single small icon,
-NO sub-text, NO explanation sentences.
-
-Step 1 box (light blue #DBEAFE fill, dark text):
-- Label at top: "{{STEP_1}}"
-- One small dark icon below the label: {{ICON_1}}
-
-Step 2 box in the middle (dark blue #1E3A8A fill, white text):
-- Label at top: "{{STEP_2}}"
-- {{N_ICONS}} small white line-art icons arranged in a horizontal row below the label: {{ICON_2}}
-
-Step 3 box (light blue #DBEAFE fill, dark text):
-- Label at top: "{{STEP_3}}"
-- One small dark icon below the label: {{ICON_3}}
-
-[STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
-```
+Style-Suffix aus `templates/style-suffix-wissenschaft.md` immer unten anhängen.
 
 ## Beispiel-Inhalt
 
-- HEADLINE: "Beispiel: Lead-Recherche"
-- STEP_1: "Auftrag", ICON_1: speech bubble
-- STEP_2: "Agent arbeitet" (primary blue), ICONS: browser, search, contact card
-- STEP_3: "Ergebnis", ICON_3: list/table
+- Headline: "Beispiel: Lead-Recherche"
+- Schritte: Auftrag, Agent arbeitet (hervorgehoben), Ergebnis
+- Icons: Sprechblase, Browser/Suche/Kontaktkarte, Listen-Icon
 
-## Tipp
+## Provider
 
-Mittlere Box mit dunkelblauem Fill hervorheben (statt alle drei hellblau), damit der Workflow-Höhepunkt visuell stark wirkt.
+Siehe `docs/schaubild-prompting.md`. Default: Gemini.

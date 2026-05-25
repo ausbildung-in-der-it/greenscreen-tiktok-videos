@@ -105,17 +105,9 @@
 <body>
 
 <!--
-  Hinweis fürs Befüllen:
-
-  - Jede Sektion enthält ein eigenes Schaubild. Keine Vollbild-Sektion.
-  - "Was du sagst" ist ein <p>-Block mit ausformulierten Sprechsätzen,
-    keine Bullet-Stichpunkte. Substanz: konkrete Beispiele, Zahlen,
-    Arbeitgeber-Namen, Bilder im Kopf des Zuschauers.
-  - Anzahl Sektionen und Schaubilder richten sich nach dem Storytelling-Bogen
-    aus docs/storytelling.md. Sektionen unten sind ein Beispiel für Bogen A
-    (Aufklärungs-Pattern, 60s). Bei anderen Bögen passe an.
-  - Wiederverwendung eines Schaubilds über zwei Sektionen ist erlaubt
-    (z.B. Hauptbild in Definition und Mechanismus). Dann SCHAUBILD_X = SCHAUBILD_Y.
+  Befüll-Regeln stehen in docs/storytelling.md (Schaubild-Sequenz pro Bogen,
+  ausformulierte Sprechsätze). Sektionen unten sind ein Beispiel für Bogen A
+  (Aufklärungs-Pattern, 60s) und werden bei anderen Bögen entsprechend angepasst.
 -->
 
 <h1>{{VIDEO_TITLE}}</h1>

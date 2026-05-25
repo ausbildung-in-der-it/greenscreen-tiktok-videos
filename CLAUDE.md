@@ -32,7 +32,7 @@ Diese drei Punkte sind so zentral, dass sie hier nochmal stehen, als Backstop f√
 
 ## Ein neues Video anlegen
 
-Slash-Command: `/neues-video <thema>`. Erzeugt Ordner und orchestriert den Workflow aus `docs/workflow.md`.
+Skill: `.claude/skills/neues-video/SKILL.md`. Aufruf z.B. √ºber die Skill-Wahl oder `/neues-video <thema>`, falls als Slash-Command konfiguriert. Der Skill legt den Ordner an und orchestriert den Workflow aus `docs/workflow.md`.
 
 ## Commits
 

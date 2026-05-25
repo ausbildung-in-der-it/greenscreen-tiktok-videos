@@ -1,6 +1,6 @@
-# Schaubild-Prompt: Vergleichstabelle
+# Diagramm-Typ: Vergleichstabelle
 
-Zwei-Spalten-Tabelle mit Attribut-Spalte links, zwei Vergleichs-Spalten rechts.
+Zwei- oder Drei-Spalten-Tabelle mit Attribut-Spalte links und Vergleichs-Spalten rechts.
 
 ## Wann nutzen
 
@@ -10,42 +10,17 @@ Zwei-Spalten-Tabelle mit Attribut-Spalte links, zwei Vergleichs-Spalten rechts.
 
 ## Variablen
 
-- `HEADLINE`: z.B. "X vs. Y"
-- `LEFT_HEADER`, `RIGHT_HEADER`: Spalten-Überschriften
-- `ROWS`: 3 bis 5 Zeilen, jede mit `attr`, `left`, `right` (jeweils kurz, max. 4 Wörter)
+- **Headline**: z.B. "X vs. Y"
+- **Spalten-Header**: Namen der verglichenen Konzepte
+- **Zeilen**: drei bis fünf, jede mit Attribut-Label und je einem Zell-Label pro Spalte. Pro Zelle maximal vier Wörter, sonst geht Lesbarkeit am Daumennagel verloren.
 
-## Prompt-Template
+## Visueller Rahmen
 
-```
-Two-column comparison table in German for a clean infographic.
+Headline oben zentriert, bold. Darunter eine Tabelle mit dünnen dunkelgrauen Border-Linien. Spalten-Header-Zellen in Primärblau (#1E3A8A) mit weißem Bold-Text. Body-Zellen alternieren zwischen Hellblau (#DBEAFE) und Weiß mit dunklem Text. Attribut-Spalte links in dezentem Grau-Ton.
 
-Top center headline in bold mixed case: "{{HEADLINE}}"
+Jede Zelle enthält nur ein kurzes Label. Keine Sub-Texte, keine Erklärungssätze.
 
-Below the headline, a clean two-column table with thin dark gray borders. The
-leftmost column contains attribute labels in regular gray text. Two main columns
-to its right have dark blue (#1E3A8A) header cells with white bold text. Body
-cells alternate between light blue (#DBEAFE) and white fills with dark text.
-Every cell contains only a short label, NO sub-text, NO explanations.
-
-Column headers:
-- (leftmost): empty
-- middle: "{{LEFT_HEADER}}"
-- right: "{{RIGHT_HEADER}}"
-
-Rows below the header row, with attribute label on far left and one short label per cell:
-
-Row 1 attribute label "{{ATTR_1}}":
-- middle cell: "{{LEFT_1}}"
-- right cell: "{{RIGHT_1}}"
-
-Row 2 attribute label "{{ATTR_2}}":
-- middle cell: "{{LEFT_2}}"
-- right cell: "{{RIGHT_2}}"
-
-[weitere Zeilen analog]
-
-[STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
-```
+Style-Suffix aus `templates/style-suffix-wissenschaft.md` immer unten anhängen.
 
 ## Beispiel-Inhalt
 
@@ -53,7 +28,7 @@ Row 2 attribute label "{{ATTR_2}}":
 |---|---|---|
 | Steuerung | Mensch tippt | Entscheidet selbst |
 | Werkzeuge | keine | Browser, Code, Datenbank |
-| Ablauf | Frage → Antwort | Schleife |
+| Ablauf | Frage, Antwort | Schleife |
 | Ziel | wartet | verfolgt Ziel |
 
 ## Provider

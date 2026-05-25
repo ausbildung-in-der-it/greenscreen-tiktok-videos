@@ -27,16 +27,16 @@ Wenn nicht aus $ARGUMENTS klar: frag den User nach dem Typ.
 
 ## 2. Prompt schreiben
 
-Lies das passende Template (bei Custom-Layout: schreib direkt). Füll Variablen ein. Hänge den Style-Block aus `templates/style-suffix-wissenschaft.md` unten an. Speichere unter `videos/NN/prompts/<X>.txt`.
+Lies das passende Template (bei Custom-Layout: schreib direkt). Füll Variablen ein. Hänge den Style-Block aus `templates/style-suffix-wissenschaft.md` unten an. Speichere unter `videos/NN-thema/prompts/<X>.txt`.
 
 ## 3. Generieren
 
 ```bash
-tools image generate "$(cat ./videos/NN/prompts/X.txt)" \
+tools image generate "$(cat ./videos/NN-thema/prompts/X.txt)" \
   --provider=gemini \
   --aspect-ratio=1:1 \
   --image-size=2K \
-  -o ./videos/NN/schaubilder/X-roh.png
+  -o ./videos/NN-thema/schaubilder/X-roh.png
 ```
 
 ## 4. Flach kopieren
@@ -44,9 +44,9 @@ tools image generate "$(cat ./videos/NN/prompts/X.txt)" \
 Die CLI legt den Output in einem Unterordner ab:
 
 ```bash
-src=$(find ./videos/NN/schaubilder/X-roh.png -name 'image-*' -type f | head -1)
-cp "$src" ./videos/NN/schaubilder/X.${src##*.}
-rm -rf ./videos/NN/schaubilder/X-roh.png
+src=$(find ./videos/NN-thema/schaubilder/X-roh.png -name 'image-*' -type f | head -1)
+cp "$src" ./videos/NN-thema/schaubilder/X.${src##*.}
+rm -rf ./videos/NN-thema/schaubilder/X-roh.png
 ```
 
 ## 5. Visuell prüfen
@@ -60,8 +60,8 @@ tools image generate "fix German typography: change Xae to Xä, keep all other e
   --provider=gemini \
   --aspect-ratio=1:1 \
   --image-size=2K \
-  --input1=./videos/NN/schaubilder/X.jpeg \
-  -o ./videos/NN/schaubilder/X-fix.png
+  --input1=./videos/NN-thema/schaubilder/X.jpeg \
+  -o ./videos/NN-thema/schaubilder/X-fix.png
 ```
 
 Nach zwei gescheiterten Iterationen: dem User zeigen, was vorliegt, und kurz fragen wie weiter (anderer Prompt, Text reduzieren, Layout anpassen).

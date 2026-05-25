@@ -8,34 +8,28 @@ allowed-tools: Bash
 
 # TikTok-Composites generieren
 
-Video-Ordner: $ARGUMENTS (z.B. `videos/01-was-ist-ein-ki-agent`)
+Video-Ordner: $ARGUMENTS (z.B. `videos/01-was-ist-ein-ki-agent`). Bei leerem Argument: nachfragen.
 
-Wenn $ARGUMENTS leer ist: frag nach.
+Padding-Werte und Greenscreen-Höhe stehen als Konstanten am Anfang von `scripts/make-tiktok-composites.py`. Bei abweichendem Wunsch dort anpassen, nicht hier.
 
 ## 1. Voraussetzungen prüfen
 
-- `videos/NN/schaubilder/` existiert und enthält mindestens ein `.jpeg`, `.jpg` oder `.png`
+- `videos/NN-thema/schaubilder/` existiert und enthält mindestens ein `.jpeg`, `.jpg` oder `.png`
 - PIL/Pillow ist installiert: `python3 -c "from PIL import Image"`
 
-## 2. Padding-Werte (optional)
-
-Defaults im Skript: `PAD_TOP = 180`, `PAD_SIDE = 130`. Bei abweichendem Wunsch im Skript anpassen.
-
-## 3. Skript ausführen
+## 2. Skript ausführen
 
 ```bash
 python3 scripts/make-tiktok-composites.py videos/NN-thema/
 ```
 
-## 4. Output verifizieren
+## 3. Output verifizieren
 
 ```bash
 ls -lh videos/NN-thema/tiktok-1080x1920/
 open videos/NN-thema/tiktok-1080x1920/
 ```
 
-## 5. Greenscreen-Raum kontrollieren
+## 4. Greenscreen-Raum kontrollieren
 
-Das Skript loggt pro Bild den freien Raum unten. Default 920px (48% der Höhe). Bei weniger als 800px: Padding reduzieren oder Schaubild kleiner skalieren.
-
-Bei Padding-Anpassung den Wert im Skript dokumentieren (Kommentar oben).
+Das Skript loggt pro Bild den freien Raum unten. Unterschreitet er die im Skript dokumentierte Mindest-Höhe, das Padding im Skript reduzieren oder das Schaubild kleiner skalieren.

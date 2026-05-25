@@ -1,6 +1,6 @@
 # Storytelling-Bögen für Erklär-Videos
 
-Wiederverwendbare Strukturen. Pick den, der zum Thema passt.
+Wiederverwendbare Strukturen. Nimm den, der zum Thema passt.
 
 ## Grundregel: Schaubild in jeder Sektion
 

@@ -1,48 +1,35 @@
-# Schaubild-Prompt: Kreislauf
+# Diagramm-Typ: Kreislauf
 
-Vier nummerierte Boxen auf einem Kreis, mit Pfeilen im Uhrzeigersinn.
+Mehrere nummerierte Stationen auf einem Kreis, mit Pfeilen im Uhrzeigersinn verbunden.
 
 ## Wann nutzen
 
-- "Wie funktioniert X als Prozess?"
+- "Wie funktioniert X als Schleife?"
 - Iterative Loops (ReAct, OODA, Plan-Do-Check-Act)
 - "Endlos-Schleifen" als Konzept
 
 ## Variablen
 
-- `HEADLINE`: z.B. "Der Arbeitszyklus eines KI-Agenten"
-- `STEPS`: 3 bis 6 nummerierte Stationen, je ein kurzes Label (max. 2 Wörter)
+- **Headline**: z.B. "Der Arbeitszyklus eines KI-Agenten"
+- **Stationen**: drei bis sechs nummerierte Schritte, je ein kurzes Label (max. zwei Wörter). Vier passt am saubersten auf den Kreis (Uhrzeiten 12, 3, 6, 9). Bei fünf oder sechs wird das Layout enger.
 
-## Prompt-Template
+## Visueller Rahmen
 
-```
-Circular flow diagram in German showing how {{TOPIC}} works in a loop.
+Headline oben zentriert. Darunter gleich große rounded Rectangles, gleichmäßig auf einem gedachten Kreis verteilt, mit Primärblau-Fill und weißem Bold-Text. Jede Box trägt eine Nummer plus Label.
 
-Top center headline in bold mixed case: "{{HEADLINE}}"
+Gebogene dunkelgraue Pfeile mit triangularen Spitzen verbinden die Stationen im Uhrzeigersinn zu einer geschlossenen Schleife. Mittelpunkt des Kreises bleibt leer.
 
-Below the headline, {{N}} equally sized rounded rectangles arranged equidistantly
-on an imaginary circle (positions: top, right, bottom, left). Each box is filled
-with dark blue (#1E3A8A) and contains white bold text. Each box has a number
-followed by a single short label, nothing else, NO sub-text:
-
-- Top box (12 o'clock): "1. {{STEP_1}}"
-- Right box (3 o'clock): "2. {{STEP_2}}"
-- Bottom box (6 o'clock): "3. {{STEP_3}}"
-- Left box (9 o'clock): "4. {{STEP_4}}"
-
-{{N}} curved dark gray arrows connect the boxes clockwise, forming a clear closed loop.
-Arrows have simple triangular arrowheads.
-
-In the center of the loop, completely empty white space, NO additional text or icon.
-
-[STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
-```
+Style-Suffix aus `templates/style-suffix-wissenschaft.md` immer unten anhängen.
 
 ## Beispiel-Inhalt
 
-- HEADLINE: "Der Arbeitszyklus eines KI-Agenten"
-- STEPS: ["Ziel", "Denken", "Handeln", "Beobachten"]
+- Headline: "Der Arbeitszyklus eines KI-Agenten"
+- Stationen: 1. Ziel, 2. Denken, 3. Handeln, 4. Beobachten
 
 ## Tipp
 
-Bei 4 Boxen klappt der Kreis sauber (12, 3, 6, 9 Uhr). Bei 5 oder 6 Boxen wird das Layout enger; teste auf Lesbarkeit am Daumennagel.
+Bei mehr als vier Stationen: vor dem Generieren prüfen, ob ein linearer Prozess-Block (siehe `prozess-3-schritt.md`, mit mehr Schritten) didaktisch nicht klarer wäre als ein gedrängter Kreis.
+
+## Provider
+
+Siehe `docs/schaubild-prompting.md`. Default: Gemini.
