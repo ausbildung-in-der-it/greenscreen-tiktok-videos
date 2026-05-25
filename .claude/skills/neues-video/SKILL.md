@@ -1,60 +1,47 @@
 ---
-name: neues-video
-description: Legt einen neuen TikTok-Video-Ordner unter videos/NN-thema/ an und führt durch Prämisse, Recherche, Storytelling-Bogen, 3 Schaubild-Ansätze. Triggert bei "neues video", "tiktok video starten", "neuer erklärfilm".
+description: Legt einen neuen TikTok-Video-Ordner unter videos/NN-thema/ an und führt durch Prämisse, Recherche, Storytelling-Bogen, drei Schaubild-Ansätze.
+when_to_use: Triggert bei "neues video", "tiktok video starten", "neuer erklärfilm".
+argument-hint: [thema]
+disable-model-invocation: true
+allowed-tools: Bash Glob Read Write
 ---
 
 # Neues TikTok-Video starten
 
-Du hilfst dem User, ein neues Video von Null aufzubauen. Strukturiert nach dem Workflow in `docs/workflow.md`.
+Arbeitstitel: $ARGUMENTS
 
-## Argumente
+Folge `docs/workflow.md`. Befolge die Stil-Regeln aus `docs/stil-regeln.md` (echte Umlaute, keine Em-Dashes, Du-Anrede).
 
-Wenn der User ein Thema mitgegeben hat (z.B. `/neues-video MCP-Protokoll erklärt`), nutze es als Arbeitstitel. Wenn nicht, frag nach dem Thema.
-
-## Schritte
-
-### 1. Ordner anlegen
+## 1. Ordner anlegen
 
 Finde die nächste laufende Nummer:
 
 ```bash
-ls videos/ | grep -E '^[0-9]{2}-' | sort | tail -1
+ls videos/ 2>/dev/null | grep -E '^[0-9]{2}-' | sort | tail -1
 ```
 
-Lege an: `videos/NN-thema-slug/` mit Unterordnern `prompts/`, `schaubilder/`, `tiktok-1080x1920/`.
+Lege an: `videos/NN-thema-slug/` mit Unterordnern `prompts/`, `schaubilder/`, `tiktok-1080x1920/`. Erstelle `README.md` mit Arbeitstitel und Status "in Arbeit".
 
-Erstelle ein `README.md` mit Arbeitstitel und Status "in Arbeit".
+## 2. Prämisse formulieren
 
-### 2. Prämisse formulieren
+Frag: "Was soll die Zuschauerin am Ende verstanden haben? Ein Satz."
 
-Frag den User: "Was soll die Zuschauerin am Ende verstanden haben? Ein Satz."
+Speichere die Prämisse oben im README mit Datum.
 
-Speicher die Prämisse oben im README, plus Stand und Datum.
+## 3. Recherche
 
-### 3. Recherche starten
+Schlag vor: Schnell-Check (WebSearch + exa parallel, 5 bis 10 Minuten) oder Tiefen-Recherche per Opus-Subagent (`/recherche-tiefe`).
 
-Schlage vor, ob
+Bei Schnell-Check: Ergebnisse direkt in `videos/NN/recherche.md` ablegen.
 
-- ein **Schnell-Check** reicht (WebSearch + exa parallel, 5 bis 10 Minuten)
-- oder eine **Tiefen-Recherche per Opus-Subagent** sinnvoll ist (bei historischen Themen, Begriffsgeschichte, vielen Stationen)
+## 4. Storytelling-Bogen wählen
 
-Bei Schnell-Check: führe selbst durch, lege Ergebnisse in `videos/NN/recherche.md` ab.
-Bei Tiefen-Recherche: starte einen Opus-Subagent mit Brief gemäß `docs/recherche.md`.
+Zeig die vier Bögen aus `docs/storytelling.md`. Schlag den passendsten vor. Bei Unsicherheit: AskUserQuestion.
 
-### 4. Storytelling-Bogen wählen
+## 5. Drei Schaubild-Ansätze
 
-Zeige die 4 Bögen aus `docs/storytelling.md` (Aufklärung, Historie, Vergleich, How-to) und schlage den passendsten vor. Bei Unsicherheit: AskUserQuestion.
+Skizziere drei konkurrierende visuelle Ansätze mit Stärken und Schwächen. Lass den User wählen.
 
-### 5. Drei Schaubild-Ansätze
+## 6. Weiter mit Schaubild-Prompting
 
-Skizziere 3 konkurrierende visuelle Ansätze für das Hauptkonzept des Videos. Jeder Ansatz mit Stärke und Schwäche. Lass den User wählen.
-
-### 6. Mit nächster Phase weitermachen
-
-Nach Bestätigung: gehe zu Schaubild-Prompting (siehe `.claude/skills/schaubild-prompts/SKILL.md`).
-
-## Wichtig
-
-- Folge den Stil-Regeln aus `docs/stil-regeln.md` (Umlaute, keine Em-Dashes, Du-Anrede)
-- Bei jedem User-Input: bestätigen, nicht raten
-- Quellen-Pflicht von Anfang an (siehe `docs/recherche.md`)
+Nach Bestätigung: `/schaubild-prompts` verwenden.

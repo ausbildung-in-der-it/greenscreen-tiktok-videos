@@ -38,12 +38,10 @@ In the center of the loop, completely empty white space, NO additional text or i
 [STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
 ```
 
-## Beispiel (aus Video 01)
+## Beispiel-Inhalt
 
 - HEADLINE: "Der Arbeitszyklus eines KI-Agenten"
 - STEPS: ["Ziel", "Denken", "Handeln", "Beobachten"]
-
-Vollständiger Prompt in `videos/01-was-ist-ein-ki-agent/prompts/C-clean.txt`.
 
 ## Tipp
 

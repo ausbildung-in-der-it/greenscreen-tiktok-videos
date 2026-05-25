@@ -21,8 +21,8 @@ Liegt in `templates/style-suffix-wissenschaft.md`. An jeden Bild-Prompt unten an
 | Anforderung | Provider | Begründung |
 |---|---|---|
 | Schaubild mit wenig Text | Gemini | Günstiger, ruhigere Farbwirkung |
-| Schaubild mit vielen Labels (Tabelle, Diagramm) | OpenAI gpt-image-2 high | Bessere Text-Treue, sauberere Kanten |
-| Img2img-Korrektur | Gemini | OpenAI gpt-image-2 hat kein Img2img |
+| Schaubild mit vielen Labels (Tabelle, Diagramm) | OpenAI hohe Qualität | Bessere Text-Treue, sauberere Kanten |
+| Img2img-Korrektur | Gemini | OpenAI unterstützt aktuell kein Img2img |
 | Illustrative Szenen | Gemini | Ausreichend, OpenAI ist teurer |
 
 ## Befehl
@@ -61,7 +61,7 @@ keep all other elements identical, do not change layout, colors, or arrows" \
 | Typ | Template | Beste Provider-Wahl |
 |---|---|---|
 | Hub-Spoke (Komponenten) | `templates/schaubild-prompts/hub-spoke.md` | Gemini |
-| Vergleichstabelle | `templates/schaubild-prompts/vergleichstabelle.md` | OpenAI gpt-image-2 high |
+| Vergleichstabelle | `templates/schaubild-prompts/vergleichstabelle.md` | OpenAI hohe Qualität |
 | Kreislauf | `templates/schaubild-prompts/kreislauf.md` | Gemini |
 | 3-Schritt-Prozess | `templates/schaubild-prompts/prozess-3-schritt.md` | Gemini |
 

@@ -41,14 +41,12 @@ Step 3 box (light blue #DBEAFE fill, dark text):
 [STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
 ```
 
-## Beispiel (aus Video 01)
+## Beispiel-Inhalt
 
 - HEADLINE: "Beispiel: Lead-Recherche"
 - STEP_1: "Auftrag", ICON_1: speech bubble
 - STEP_2: "Agent arbeitet" (primary blue), ICONS: browser, search, contact card
 - STEP_3: "Ergebnis", ICON_3: list/table
-
-Vollständiger Prompt in `videos/01-was-ist-ein-ki-agent/prompts/D-clean.txt`.
 
 ## Tipp
 

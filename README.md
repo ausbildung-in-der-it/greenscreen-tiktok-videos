@@ -12,7 +12,7 @@ Jedes Video erklärt **ein Konzept** in 60 bis 90 Sekunden. Du sprichst frei vor
 2. **Recherche** mit Primärquellen (siehe `docs/recherche.md`). Anthropic, OpenAI, Wissenschaft, OECD. Keine Drittquellen ohne Reputation.
 3. **Storytelling-Bogen** aus dem Template wählen (`docs/storytelling.md`). Hook → Abgrenzung → Definition → Mechanismus → Praxis → CTA.
 4. **3 Konzept-Ansätze** für Schaubilder skizzieren, einen wählen.
-5. **Schaubilder generieren** über `tools image generate` mit den Prompt-Templates aus `templates/schaubild-prompts/`. Gemini oder OpenAI gpt-image-2, 1:1, 2K.
+5. **Schaubilder generieren** über `tools image generate` mit den Prompt-Templates aus `templates/schaubild-prompts/`. Provider Gemini oder OpenAI, 1:1, 2K.
 6. **HTML-Skript bauen** auf Basis von `templates/skript.html.template`. Bullets zum freien Sprechen, Nuance-Boxen für Rückfragen.
 7. **TikTok-Composites** rendern mit `scripts/make-tiktok-composites.py`. 1:1 wird zu 1080x1920 mit Padding, Greenscreen-Raum bleibt unten.
 8. **Aufnehmen, schneiden, posten.**

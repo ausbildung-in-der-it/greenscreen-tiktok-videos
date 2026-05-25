@@ -43,7 +43,7 @@ Alles, was in ein Video oder Skript geht, muss stimmen.
 
 ## Schaubild-Generierung
 
-- Provider: Gemini als Default (günstig, ruhige Optik). OpenAI gpt-image-2 high quality, wenn Text-Treue kritisch ist (z.B. bei Tabellen mit vielen Labels).
+- Provider: Gemini als Default (günstig, ruhige Optik). OpenAI mit hoher Qualitätsstufe, wenn Text-Treue kritisch ist (z.B. bei Tabellen mit vielen Labels).
 - Style-Block aus `templates/style-suffix-wissenschaft.md` an jeden Prompt anhängen.
 - **Keine Sub-Texte in Boxen.** Pro Box nur ein Haupt-Label. Erklärungen kommen ins gesprochene Wort, nicht ins Schaubild.
 - Heller Hintergrund (#FFFFFF), Farbpalette: dunkelblau #1E3A8A mit weißem Text, hellblau #DBEAFE mit dunklem Text. Keine Gradients, kein Glow.

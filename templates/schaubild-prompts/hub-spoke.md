@@ -46,7 +46,7 @@ Two thin dark gray arrows connect the central container with the outer box:
 [STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
 ```
 
-## Beispiel (aus Video 01)
+## Beispiel-Inhalt
 
 - HEADLINE: "Komponenten eines KI-Agenten"
 - CONTAINER_LABEL: "KI-Agent"
@@ -54,5 +54,3 @@ Two thin dark gray arrows connect the central container with the outer box:
 - OUTER_LABEL: "Umgebung"
 - INFLOW_LABEL: "Eingaben"
 - OUTFLOW_LABEL: "Aktionen"
-
-Vollständiger Prompt in `videos/01-was-ist-ein-ki-agent/prompts/A-harness.txt`.

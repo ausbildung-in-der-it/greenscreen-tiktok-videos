@@ -47,7 +47,7 @@ Row 2 attribute label "{{ATTR_2}}":
 [STYLE-SUFFIX VON style-suffix-wissenschaft.md HIER ANHÄNGEN]
 ```
 
-## Beispiel (aus Video 01)
+## Beispiel-Inhalt
 
 | Attribut | Chatbot | KI-Agent |
 |---|---|---|
@@ -56,8 +56,6 @@ Row 2 attribute label "{{ATTR_2}}":
 | Ablauf | Frage → Antwort | Schleife |
 | Ziel | wartet | verfolgt Ziel |
 
-Vollständiger Prompt in `videos/01-was-ist-ein-ki-agent/prompts/B-clean.txt`.
-
 ## Tipp
 
-Bei Tabellen ist Text-Treue wichtig. **OpenAI gpt-image-2 high quality** liefert hier oft sauberer als Gemini.
+Bei Tabellen ist Text-Treue wichtig. **OpenAI mit hoher Qualitätsstufe** liefert hier oft sauberer als Gemini.
