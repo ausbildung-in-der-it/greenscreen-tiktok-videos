@@ -1,0 +1,46 @@
+Question-and-answer decision card stack in German for a clean infographic, showing which of the IT professions matches which interest. Five rows.
+
+Top center headline in bold mixed case: "Welcher passt zu dir?"
+
+Below the headline, five horizontal cards stacked vertically. Each card has two halves:
+- Left half: a light blue (#DBEAFE) rounded rectangle with a question in dark blue (#1E3A8A) text
+- An arrow pointing rightward between the halves (thin dark gray arrow with triangular arrowhead)
+- Right half: a dark blue (#1E3A8A) rounded rectangle with the matching profession name in white bold text
+
+The five cards are equal in height, with a small vertical gap between them (about 14 pixels). The left and right halves are equal in width.
+
+Card 1:
+- Left question: "Programmieren?"
+- Right answer: "Fachinformatiker Anwendungsentwicklung"
+
+Card 2:
+- Left question: "Netzwerke administrieren?"
+- Right answer: "Fachinformatiker Systemintegration"
+
+Card 3:
+- Left question: "Hardware aufbauen?"
+- Right answer: "IT-System-Elektroniker"
+
+Card 4:
+- Left question: "Beraten und verkaufen?"
+- Right answer: "Kaufmann IT-System-Management"
+
+Card 5:
+- Left question: "Prozesse digitalisieren?"
+- Right answer: "Kaufmann Digitalisierungsmanagement"
+
+Absolutely NO sub-descriptions in the cards. NO icons. NO additional text.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (5 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: light blue (#DBEAFE) question boxes with dark blue (#1E3A8A) text, dark blue (#1E3A8A) answer boxes with white text, dark gray (#1F2937) for arrows and headline
+- Thin dark gray arrows (2 pixel) with simple triangular arrowheads
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and answer labels, regular weight for questions
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram

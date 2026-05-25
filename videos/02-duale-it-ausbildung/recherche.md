@@ -72,6 +72,23 @@ Im ersten Ausbildungsjahr ist deshalb eine gemeinsame Beschulung möglich. Erst 
 - Soziale und personale Kompetenzen stärker im Fokus
 - Bewährtes Prüfungsinstrument "Betriebliche Projektarbeit" bleibt
 
+## Aktualisierung: Neuabschlüsse 2025
+
+Tab67 ist seit 05.12.2025 für das Berichtsjahr 2025 verfügbar. Zahlen rückläufig in allen vier Berufen, der Anteil des Fachinformatikers bleibt aber stabil bei 84 Prozent.
+
+| Beruf | 2024 | 2025 | Veränderung |
+|---|---|---|---|
+| Fachinformatiker | 17.715 | 15.072 | -2.643 (-14,9 Prozent) |
+| IT-System-Elektroniker | 1.410 | 1.218 | -192 (-13,6 Prozent) |
+| Kaufmann IT-System-Management | 1.044 | 867 | -177 (-17,0 Prozent) |
+| Kaufmann Digitalisierungsmanagement | 825 | 780 | -45 (-5,5 Prozent) |
+| Summe IT-Berufe | 20.994 | 17.937 | -14,6 Prozent |
+| Fachinformatiker-Anteil | 84,4 Prozent | 84,0 Prozent | stabil |
+
+Der allgemeine Rückgang spiegelt den bundesweiten Trend wider (laut destatis -1,8 Prozent bei dualen Neuabschlüssen 2024). Bei den IT-Berufen ist der Rückgang aber deutlich stärker als im Bundesdurchschnitt, was eine eigene Diskussion wert wäre, hier aber nicht ins Video geht.
+
+Quelle 2025: [BIBB Tabelle 67, Stand 05.12.2025](https://www.bibb.de/de/211102.php), PDF: [naa309_2025_tab067_0bund.pdf](https://www.bibb.de/dokumente/pdf/naa309/naa309_2025_tab067_0bund.pdf)
+
 ## Schlüssel-Befunde für das Video
 
 1. **Es gibt vier IT-Berufe, nicht einen.** Verwechslungsgefahr besonders bei den beiden Kaufleuten-Berufen, deren Namen ähnlich klingen.

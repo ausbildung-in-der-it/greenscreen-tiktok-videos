@@ -1,0 +1,32 @@
+Outro question card in German with a cliffhanger to the next video. No verb-pills.
+
+Layout: vertically centered content on a clean white canvas, three stacked text blocks.
+
+Block 1 (top, big bold dark text, centered, very large size):
+"Welcher wärst du?"
+
+Block 2 (middle, small muted gray text, centered):
+"Schreib es in die Kommentare."
+
+Below block 2, a thin horizontal divider line in light gray (#E5E7EB), about 60 percent of the canvas width, centered.
+
+Block 3 (bottom area, a single horizontal card with two text rows inside, centered on the canvas, occupying about 80 percent of the canvas width):
+- Card has dark blue fill (#1E3A8A), white bold text, rounded corners (6 pixel radius)
+- Inside the card, two centered lines:
+  - First line in regular weight, smaller, muted (white at slight opacity or light gray text): "Nächste Folge"
+  - Second line in bold, larger: "Die vier Fachrichtungen des Fachinformatikers"
+
+Absolutely NO other text or decoration. No icons, no arrows, no logos.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangle with rounded corners (6 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) for the cliffhanger card with white text, dark gray (#1F2937) for the big question, muted gray (#6B7280) for the call-to-action subtitle, light gray (#E5E7EB) for the divider
+- Sans-serif typography only (Inter / Helvetica / Arial), very bold and very large for the main question, regular for the CTA subtitle, bold for the cliffhanger title, regular for the cliffhanger label
+- Generous white space, perfectly vertically balanced composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram

@@ -1,0 +1,45 @@
+Before-after genealogy diagram in German for a clean infographic, showing how the four German dual IT professions were reorganized in 2020.
+
+Top center headline in bold mixed case: "Was 2020 neu geordnet wurde"
+
+Below the headline, a two-column layout with arrows pointing from left to right:
+- Left column header in muted gray: "vor 2020"
+- Right column header in muted gray: "seit 1. August 2020"
+- A vertical thin gray line between the columns, with the year "2020" centered as a small label on it
+
+Four rows below the headers, each containing one transformation. Each row has:
+- Left side: a light gray (#E5E7EB) rounded rectangle box with dark text (the old profession name)
+- A simple thin dark gray arrow with a triangular arrowhead pointing rightward
+- Right side: a dark blue (#1E3A8A) rounded rectangle box with white bold text (the new profession name)
+
+Row 1:
+- Left box: "Informatikkaufmann"
+- Right box: "Kaufmann Digitalisierungsmanagement"
+
+Row 2:
+- Left box: "IT-System-Kaufmann"
+- Right box: "Kaufmann IT-System-Management"
+
+Row 3:
+- Left box: "Fachinformatiker, 2 Fachrichtungen"
+- Right box: "Fachinformatiker, 4 Fachrichtungen"
+
+Row 4:
+- Left box: "IT-System-Elektroniker"
+- Right box: "IT-System-Elektroniker (überarbeitet)"
+
+Absolutely NO sub-descriptions in the boxes. NO icons. NO additional decoration.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (5 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: light gray (#E5E7EB) for old profession boxes with dark text, dark blue (#1E3A8A) for new profession boxes with white text, dark gray (#1F2937) for arrows and headline, muted gray (#6B7280) for column headers and the "2020" label
+- Thin dark gray arrows (2 pixel) with simple triangular arrowheads
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and new-profession box labels, regular for old-profession labels and column headers
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram

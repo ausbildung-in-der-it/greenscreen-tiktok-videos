@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Die vier dualen IT-Berufe, Spickzettel</title>
+<style>
+  :root {
+    --primary: #1E3A8A;
+    --secondary: #DBEAFE;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --bg: #FFFFFF;
+    --border: #E5E7EB;
+    --nuance-bg: #FEF9E7;
+    --nuance-border: #F59E0B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 32px 96px;
+  }
+  h1 { font-size: 32px; margin: 0 0 8px; color: var(--primary); }
+  .lead { font-size: 17px; color: var(--muted); margin: 0 0 32px; }
+  nav {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 12px 16px; background: var(--secondary);
+    border-radius: 8px; margin-bottom: 40px; font-size: 14px;
+  }
+  nav a {
+    color: var(--primary); text-decoration: none;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  nav a:hover { background: rgba(30,58,138,0.1); }
+  section {
+    margin-bottom: 56px; padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  .timing {
+    display: inline-block; background: var(--primary); color: white;
+    font-weight: 600; font-size: 13px; padding: 4px 10px;
+    border-radius: 4px; margin-bottom: 8px; letter-spacing: 0.5px;
+  }
+  h2 { font-size: 24px; margin: 4px 0 16px; color: var(--text); }
+  .visual {
+    display: flex; gap: 24px; align-items: flex-start; margin: 16px 0 20px;
+  }
+  .visual img {
+    width: 280px; height: 280px; object-fit: contain;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: white; flex-shrink: 0;
+  }
+  .sprechtext { flex: 1; }
+  .sprechtext h3 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px;
+    color: var(--muted); margin: 0 0 8px; font-weight: 600;
+  }
+  .sprechtext p {
+    margin: 0 0 12px; font-size: 16px; line-height: 1.6;
+  }
+  .sprechtext p:last-child { margin-bottom: 0; }
+  .sprechtext strong { color: var(--primary); }
+  .nuance {
+    background: var(--nuance-bg); border-left: 4px solid var(--nuance-border);
+    padding: 14px 18px; border-radius: 4px; margin-top: 16px; font-size: 14px;
+  }
+  .nuance strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #92400E; margin-bottom: 6px;
+  }
+  .nuance p { margin: 0 0 8px; }
+  .nuance p:last-child { margin-bottom: 0; }
+  .quellen {
+    background: #F9FAFB; padding: 24px 28px; border-radius: 8px;
+  }
+  .quellen h2 { margin-top: 0; color: var(--primary); }
+  .quellen ul { padding-left: 18px; margin: 0; }
+  .quellen li { margin-bottom: 10px; font-size: 14px; }
+  .quellen a { color: var(--primary); word-break: break-word; }
+  .quellen .anbieter {
+    font-weight: 600; text-transform: uppercase; font-size: 12px;
+    letter-spacing: 0.8px; color: var(--muted);
+    margin-top: 18px; margin-bottom: 8px;
+  }
+  .praemisse {
+    background: var(--primary); color: white;
+    padding: 24px 28px; border-radius: 8px; margin-bottom: 40px; font-size: 16px;
+  }
+  .praemisse strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 8px; opacity: 0.8;
+  }
+  @media (max-width: 700px) {
+    .visual { flex-direction: column; }
+    .visual img { width: 100%; height: auto; max-width: 360px; }
+    body { padding: 24px 16px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Die vier dualen IT-Berufe</h1>
+<p class="lead">60-Sekunden-Überblick. Für Schulabgänger, Eltern und Quereinsteiger. Spickzettel zum Aufnehmen.</p>
+
+<nav>
+  <a href="#hook">Hook</a>
+  <a href="#verwirrung">Verwirrung</a>
+  <a href="#matrix">Die vier Berufe</a>
+  <a href="#entscheidung">Entscheidung</a>
+  <a href="#outro">Outro</a>
+  <a href="#quellen">Quellen</a>
+</nav>
+
+<div class="praemisse">
+  <strong>Prämisse</strong>
+  Welcher der vier dualen IT-Berufe zu dir passt, entscheidet sich an einer einzigen Frage: willst du programmieren, Netzwerke administrieren, Hardware aufbauen, Kunden beraten oder Prozesse digitalisieren?
+</div>
+
+<section id="hook">
+  <span class="timing">0 bis 5 Sekunden, Hook</span>
+  <h2>Schaubild B, Balkendiagramm</h2>
+  <div class="visual">
+    <img src="schaubilder/B-statistik.jpeg" alt="Balkendiagramm Neuabschlüsse 2025, vier IT-Berufe">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Es gibt nicht <strong>eine</strong> IT-Ausbildung. Es gibt vier. Aber 84 Prozent aller IT-Azubis machen denselben Beruf.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Woher kommt die 84-Prozent-Zahl?</strong>
+    <p>BIBB Tabelle 67, Neuabschlüsse 2025, Stand 05.12.2025: Fachinformatiker 15.072, die anderen drei zusammen 2.865. 15.072 von 17.937, das sind 84 Prozent. Quelle und Tabelle in den Kommentaren.</p>
+    <p>Der Anteil ist stabil: 2024 waren es ebenfalls 84 Prozent. Die absoluten Zahlen sind aber alle gesunken, der bundesweite Trend zu weniger Ausbildungsverträgen zeigt sich auch in der IT.</p>
+  </div>
+</section>
+
+<section id="verwirrung">
+  <span class="timing">5 bis 15 Sekunden, Verwirrung benennen</span>
+  <h2>Schaubild C, Genealogie</h2>
+  <div class="visual">
+    <img src="schaubilder/C-genealogie.jpeg" alt="Vorher-Nachher der vier IT-Berufe, 2020 neu geordnet">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Seit dem 1. August 2020 sind die vier dualen IT-Berufe neu geordnet. Aus dem alten <strong>Informatikkaufmann</strong> wurde der Kaufmann für Digitalisierungsmanagement, aus dem <strong>IT-System-Kaufmann</strong> der Kaufmann für IT-System-Management. Verwirrend, aber wichtig.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Warum die Umbenennung?</strong>
+    <p>Die alten IT-Berufe stammten aus 1997. Das BIBB hat 2020 die Inhalte modernisiert: IT-Sicherheit und Datenschutz wurden ausgebaut, beim Fachinformatiker kamen die Fachrichtungen Daten- und Prozessanalyse sowie Digitale Vernetzung dazu. Die gestreckte Abschlussprüfung wurde eingeführt.</p>
+  </div>
+</section>
+
+<section id="matrix">
+  <span class="timing">15 bis 45 Sekunden, die vier Berufe</span>
+  <h2>Schaubild A, 2x2-Matrix mit aufgesplittetem Fachinformatiker</h2>
+  <div class="visual">
+    <img src="schaubilder/A-matrix.jpeg" alt="2x2-Matrix der dualen IT-Berufe, Fachinformatiker in AE und SI gesplittet">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Vier Berufe, zwei Achsen. Oben technisch, unten kaufmännisch. Links Hardware-nah, rechts Software- und Prozess-nah.</p>
+      <p>Oben links: der <strong>IT-System-Elektroniker</strong>. Er montiert Server-Racks im Rechenzentrum, verlegt Netzwerkkabel im Krankenhaus, prüft die Stromversorgung normgerecht. Arbeitgeber: Systemhäuser, Telekom, Industrie-IT.</p>
+      <p>Oben rechts ist der <strong>Fachinformatiker</strong>, der mit Abstand größte IT-Beruf. Wichtig: Fachinformatiker ist nicht ein Beruf, sondern vier Fachrichtungen. Die zwei häufigsten zeige ich getrennt: <strong>Anwendungsentwicklung</strong> programmiert Software für interne und externe Kunden. <strong>Systemintegration</strong> administriert Netzwerke und Server, ohne den elektrotechnischen Teil. Dazu kommen noch Daten- und Prozessanalyse sowie Digitale Vernetzung.</p>
+      <p>Unten links: der <strong>Kaufmann für IT-System-Management</strong>. Er berät Kunden, erstellt Angebote, verkauft komplette IT-Lösungen. Typisch im Systemhaus oder beim IT-Dienstleister.</p>
+      <p>Unten rechts: der <strong>Kaufmann für Digitalisierungsmanagement</strong>. Er digitalisiert Geschäftsprozesse im eigenen Unternehmen. Analysiert Workflows, ermittelt Bedarf, führt neue Software ein.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Häufigste Verwechslung: Fachinformatiker Systemintegration vs. IT-System-Elektroniker</strong>
+    <p>Beide arbeiten mit IT-Systemen. Faustregel: wer physisch Hardware montiert und Stromversorgung anschließt, ist IT-System-Elektroniker. Wer Server konfiguriert und Netzwerke administriert, ohne den elektrotechnischen Teil, ist Fachinformatiker Systemintegration.</p>
+    <p>Zweite Verwechslung: die beiden Kaufleute. IT-System-Management verkauft IT-Lösungen an externe Kunden. Digitalisierungsmanagement digitalisiert die Prozesse im eigenen Unternehmen, also intern.</p>
+    <p>Die zwei nicht gezeigten Fachinformatiker-Fachrichtungen: Daten- und Prozessanalyse arbeitet an Datenverfügbarkeit und -qualität für digitale Geschäftsprozesse. Digitale Vernetzung kümmert sich um Schnittstellen zwischen Netzwerken und cyber-physischen Systemen, also klassischer Industrie-4.0-Kontext.</p>
+    <p>Hinweis: Die 2x2-Matrix ist meine didaktische Vereinfachung. BIBB klassifiziert die Berufe offiziell nicht so. Aber als Entscheidungs-Werkzeug funktioniert sie.</p>
+  </div>
+</section>
+
+<section id="entscheidung">
+  <span class="timing">45 bis 55 Sekunden, Entscheidungsregel</span>
+  <h2>Schaubild D, fünf Frage-Antwort-Karten</h2>
+  <div class="visual">
+    <img src="schaubilder/D-entscheidung.jpeg" alt="Fünf Frage-Antwort-Paare, Beruf zur Frage">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Welcher passt zu dir? Frag dich konkret: Programmieren? Fachinformatiker Anwendungsentwicklung. Netzwerke administrieren? Fachinformatiker Systemintegration. Hardware aufbauen? IT-System-Elektroniker. Beraten und verkaufen? IT-System-Management. Prozesse digitalisieren? Digitalisierungsmanagement.</p>
+      <p>Und keine Sorge, das erste Ausbildungsjahr ist für alle vier Berufe gemeinsam. Du legst dich erst danach fest.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Wenn du dich später umentscheidest</strong>
+    <p>Die ersten sieben Berufsbildpositionen sind in allen vier Berufen identisch. Ein Wechsel im ersten Jahr ist deshalb praktisch ohne Zeitverlust möglich. Mit Abitur kannst du die Ausbildung um bis zu 12 Monate verkürzen, Mindestdauer 18 Monate. Realistisch sind 2,5 Jahre.</p>
+  </div>
+</section>
+
+<section id="outro">
+  <span class="timing">55 bis 60 Sekunden, CTA</span>
+  <h2>Schaubild E, Outro-Cliffhanger</h2>
+  <div class="visual">
+    <img src="schaubilder/E-frage.jpeg" alt="Welcher wärst du, plus Cliffhanger auf nächste Folge">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Welcher wärst du? Schreib es in die Kommentare. In der nächsten Folge schauen wir uns die vier Fachrichtungen des Fachinformatikers im Detail an.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Hinweis zur Aufnahme</strong>
+    <p>Bei der Matrix-Sektion langsam sprechen, nach jedem Quadrant eine Mikropause einbauen, damit der Zuschauer mitkommt. Insgesamt rund 180 Wörter über 60 Sekunden, das sind 3 Wörter pro Sekunde, ein TikTok-typisches Tempo.</p>
+  </div>
+</section>
+
+<section id="quellen" class="quellen">
+  <h2>Quellen</h2>
+
+  <p class="anbieter">BIBB, Bundesinstitut für Berufsbildung</p>
+  <ul>
+    <li><a href="https://www.bibb.de/de/pressemitteilung_121075.php">Die neuen IT-Berufe sind da!</a>, Pressemitteilung zur Neuordnung 2020</li>
+    <li><a href="https://www.bibb.de/de/127913.php">Übersicht IT-Berufe</a>, mit Links zu allen vier Umsetzungshilfen</li>
+    <li><a href="https://www.bibb.de/de/173343.php">Fachinformatiker/-in</a>, Berufsprofil und vier Fachrichtungen</li>
+    <li><a href="https://www.bibb.de/dienst/publikationen/de/16664">Umsetzungshilfe IT-System-Elektroniker/-in</a></li>
+    <li><a href="https://www.bibb.de/dienst/publikationen/en/16667">Umsetzungshilfe Kaufmann/-frau für Digitalisierungsmanagement</a></li>
+    <li><a href="https://www.bibb.de/de/211102.php">Tabelle 67, Neuabschlüsse 2025</a>, Stand 05.12.2025</li>
+    <li><a href="https://www.bibb.de/dokumente/pdf/naa309/naa309_2025_tab067_0bund.pdf">Tabelle 67 als PDF</a>, direkter Download</li>
+  </ul>
+
+  <p class="anbieter">Bundesgesetzblatt, Februar 2020</p>
+  <ul>
+    <li><a href="https://www.gesetze-im-internet.de/itsmankflausbv/BJNR028000020.html">Verordnung Kaufmann/Kauffrau für IT-System-Management (ITSManKflAusbV)</a></li>
+  </ul>
+
+  <p class="anbieter">BERUFENET, Bundesagentur für Arbeit</p>
+  <ul>
+    <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/2927">IT-System-Elektroniker/-in, BERUFENET-Steckbrief</a></li>
+    <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/7847">Fachinformatiker/-in Systemintegration</a></li>
+    <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/7856">Fachinformatiker/-in Anwendungsentwicklung</a></li>
+    <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/133555">Kaufmann/-frau für Digitalisierungsmanagement</a></li>
+    <li><a href="https://web.arbeitsagentur.de/berufenet/beruf/133558">Kaufmann/-frau für IT-System-Management</a></li>
+  </ul>
+</section>
+
+</body>
+</html>

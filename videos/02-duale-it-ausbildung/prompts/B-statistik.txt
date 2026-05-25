@@ -1,0 +1,44 @@
+Horizontal bar chart in German for a clean infographic, showing how many new apprenticeship contracts were signed for each of the four German dual IT professions in 2025.
+
+Top center headline in bold mixed case: "Neuabschlüsse 2025"
+Subtitle below in small gray text: "duale IT-Ausbildungen"
+
+Below the headline, four horizontal bars stacked vertically, all starting from the same left baseline. Each bar has:
+- A label to the left of the bar in dark text (the profession name)
+- The bar itself
+- A number label at the right end of the bar in bold dark text (the count)
+
+The bars are scaled proportionally to the numbers shown. The longest bar should fill about 80 percent of the available width. Use the same dark blue fill (#1E3A8A) for all four bars.
+
+Bar 1 (top, longest):
+- Label left: "Fachinformatiker"
+- Number right: "15.072"
+
+Bar 2 (much shorter, about 8 percent of bar 1):
+- Label left: "IT-System-Elektroniker"
+- Number right: "1.218"
+
+Bar 3 (similar to bar 2):
+- Label left: "Kaufmann IT-System-Management"
+- Number right: "867"
+
+Bar 4 (shortest):
+- Label left: "Kaufmann Digitalisierungsmanagement"
+- Number right: "780"
+
+Below the bars, a small footnote in muted gray text: "Quelle: BIBB Tabelle 67, Stand 05.12.2025"
+
+Absolutely NO sub-descriptions in the bars themselves. NO icons. The four bars should clearly show the dramatic difference (Fachinformatiker is roughly 12 to 17 times as many as each of the other three).
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: solid rectangles for bars
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) for bars, dark gray (#1F2937) for text, muted gray (#6B7280) for footnote
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and numbers, regular for labels and footnote
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label and number large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram
