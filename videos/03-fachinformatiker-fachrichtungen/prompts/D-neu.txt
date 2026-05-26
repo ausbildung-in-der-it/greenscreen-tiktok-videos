@@ -1,0 +1,39 @@
+Two-column comparison card layout in German for a clean infographic, comparing the two newer Fachinformatiker specializations side by side.
+
+Top center headline in bold mixed case: "Die zwei neuen Fachrichtungen (seit 2020)"
+
+Below the headline, two equal-width vertical cards arranged side by side with a moderate gap between them (about 50 pixels). Each card is a single rounded rectangle with internal structure.
+
+Each card consists of three text rows stacked vertically, with thin horizontal divider lines between rows:
+- Row 1 (top): Fachrichtungs-name, large bold white text on dark blue (#1E3A8A) header background, about 18 percent of card height
+- Row 2 (middle): a single German verb in quotes, light blue (#DBEAFE) background with dark blue (#1E3A8A) bold text, about 18 percent of card height
+- Row 3 (bottom): one short example sentence, white background with dark gray (#1F2937) regular text, about 64 percent of card height, generously padded
+
+Left card:
+- Row 1: "Daten- und\nProzessanalyse"
+- Row 2: "'auswerten'"
+- Row 3: "Du findest aus den Daten heraus, wo Kunden im Online-Shop abspringen."
+
+Right card:
+- Row 1: "Digitale\nVernetzung"
+- Row 2: "'vernetzen'"
+- Row 3: "Du verbindest die Fräse in der Fabrik mit dem Wartungs-Dashboard."
+
+Both cards have a thin dark gray (#1F2937) 1-pixel border around the whole card. Card corners rounded at 6 pixels.
+
+In the very top-right corner of the headline area, a small light gray pill-shaped tag with regular dark gray text: "neu seit 2020"
+
+Absolutely NO icons. NO additional sub-text. NO bullet points. NO arrows between cards.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (6 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: dark blue (#1E3A8A) header with white text, light blue (#DBEAFE) middle row with dark blue text, white bottom row with dark gray text, dark gray (#1F2937) for headline and borders, light gray (#E5E7EB) for the small "neu seit 2020" pill
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline, Fachrichtungs-names and verbs; regular weight for the example sentences and the pill label
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. In particular, render "Fräse" with an a-umlaut, not "Fraese". Do not transliterate any umlauts to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram

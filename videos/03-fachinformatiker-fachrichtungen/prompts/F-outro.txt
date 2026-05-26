@@ -1,0 +1,26 @@
+Outro card layout in German for a clean infographic, posing a question to the viewer.
+
+Centered large headline in bold mixed case, about 35 percent down from the top: "Welche wäre deine?"
+
+Below the headline, four equal-size pill-shaped rounded rectangles arranged in a 2x2 grid with generous gaps (about 50 pixels horizontal and vertical gap between pills). Each pill is light blue (#DBEAFE) with dark blue (#1E3A8A) bold text:
+- Top-left pill: "Anwendungs-\nentwicklung"
+- Top-right pill: "System-\nintegration"
+- Bottom-left pill: "Daten- und\nProzessanalyse"
+- Bottom-right pill: "Digitale\nVernetzung"
+
+Below the 2x2 pill grid, with a moderate gap (about 60 pixels), a single line of small dark gray regular text centered: "Schreib es in die Kommentare."
+
+Absolutely NO icons. NO sub-descriptions in the pills. NO arrows. NO bullet points.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rounded rectangles (with 30 pixel radius for the pills to make them pill-shaped)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: light blue (#DBEAFE) pills with dark blue (#1E3A8A) text, dark gray (#1F2937) for the headline and the call-to-action line
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and pill labels, regular weight for the call-to-action line
+- Generous white space, symmetric composition centered on the page
+- Render German umlauts correctly: ä, ö, ü, ß. In particular, render "wäre" with an a-umlaut, not "waere". Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram

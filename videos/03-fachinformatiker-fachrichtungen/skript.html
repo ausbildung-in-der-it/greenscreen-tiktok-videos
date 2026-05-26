@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Die vier Fachrichtungen des Fachinformatikers, Spickzettel</title>
+<style>
+  :root {
+    --primary: #1E3A8A;
+    --secondary: #DBEAFE;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --bg: #FFFFFF;
+    --border: #E5E7EB;
+    --nuance-bg: #FEF9E7;
+    --nuance-border: #F59E0B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 32px 96px;
+  }
+  h1 { font-size: 32px; margin: 0 0 8px; color: var(--primary); }
+  .lead { font-size: 17px; color: var(--muted); margin: 0 0 32px; }
+  nav {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 12px 16px; background: var(--secondary);
+    border-radius: 8px; margin-bottom: 40px; font-size: 14px;
+  }
+  nav a {
+    color: var(--primary); text-decoration: none;
+    padding: 4px 10px; border-radius: 4px;
+  }
+  nav a:hover { background: rgba(30,58,138,0.1); }
+  section {
+    margin-bottom: 56px; padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+  .timing {
+    display: inline-block; background: var(--primary); color: white;
+    font-weight: 600; font-size: 13px; padding: 4px 10px;
+    border-radius: 4px; margin-bottom: 8px; letter-spacing: 0.5px;
+  }
+  h2 { font-size: 24px; margin: 4px 0 16px; color: var(--text); }
+  .visual {
+    display: flex; gap: 24px; align-items: flex-start; margin: 16px 0 20px;
+  }
+  .visual img {
+    width: 280px; height: 280px; object-fit: contain;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: white; flex-shrink: 0;
+  }
+  .sprechtext { flex: 1; }
+  .sprechtext h3 {
+    font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px;
+    color: var(--muted); margin: 0 0 8px; font-weight: 600;
+  }
+  .sprechtext p {
+    margin: 0 0 12px; font-size: 16px; line-height: 1.6;
+  }
+  .sprechtext p:last-child { margin-bottom: 0; }
+  .sprechtext strong { color: var(--primary); }
+  .nuance {
+    background: var(--nuance-bg); border-left: 4px solid var(--nuance-border);
+    padding: 14px 18px; border-radius: 4px; margin-top: 16px; font-size: 14px;
+  }
+  .nuance strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #92400E; margin-bottom: 6px;
+  }
+  .nuance p { margin: 0 0 8px; }
+  .nuance p:last-child { margin-bottom: 0; }
+  .quellen {
+    background: #F9FAFB; padding: 24px 28px; border-radius: 8px;
+  }
+  .quellen h2 { margin-top: 0; color: var(--primary); }
+  .quellen ul { padding-left: 18px; margin: 0; }
+  .quellen li { margin-bottom: 10px; font-size: 14px; }
+  .quellen a { color: var(--primary); word-break: break-word; }
+  .quellen .anbieter {
+    font-weight: 600; text-transform: uppercase; font-size: 12px;
+    letter-spacing: 0.8px; color: var(--muted);
+    margin-top: 18px; margin-bottom: 8px;
+  }
+  .praemisse {
+    background: var(--primary); color: white;
+    padding: 24px 28px; border-radius: 8px; margin-bottom: 40px; font-size: 16px;
+  }
+  .praemisse strong {
+    display: block; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 8px; opacity: 0.8;
+  }
+  @media (max-width: 700px) {
+    .visual { flex-direction: column; }
+    .visual img { width: 100%; height: auto; max-width: 360px; }
+    body { padding: 24px 16px 64px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Die vier Fachrichtungen des Fachinformatikers</h1>
+<p class="lead">90 Sekunden, Bogen C (Vergleichs-Pattern), 6 Schaubilder. Anschluss an Video 02.</p>
+
+<nav>
+  <a href="#hook">Hook</a>
+  <a href="#reform">Reform 2020</a>
+  <a href="#alt">Zoom 1, alt</a>
+  <a href="#neu">Zoom 2, neu</a>
+  <a href="#leitfrage">Leitfragen</a>
+  <a href="#outro">CTA</a>
+  <a href="#quellen">Quellen</a>
+</nav>
+
+<div class="praemisse">
+  <strong>Prämisse</strong>
+  Welche der vier Fachinformatiker-Fachrichtungen zu dir passt, lässt sich an einer einzigen Frage festmachen: baust du Software, hältst du Systeme am Laufen, wertest du Daten aus oder vernetzt du Maschinen?
+</div>
+
+<section id="hook">
+  <span class="timing">0 bis 5 Sekunden, Hook</span>
+  <h2>Ein Beruf, vier Fachrichtungen</h2>
+  <div class="visual">
+    <img src="schaubilder/A-hub.jpeg" alt="Hub-Spoke: Fachinformatiker in der Mitte, vier Speichen zu den Fachrichtungen">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Fachinformatiker, das ist <strong>ein</strong> Beruf. Aber <strong>vier</strong> Fachrichtungen. Und du wählst eine davon, bevor du den Ausbildungsvertrag unterschreibst.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>Korrekt ist: der Beruf heißt offiziell "Fachinformatiker/-in" (§ 1 FIAusbV). Die vier Fachrichtungen sind in § 4 Abs. 1 Nr. 2 der Verordnung festgelegt. Du wechselst sie nach Beginn nicht mehr ohne Weiteres.</p>
+  </div>
+</section>
+
+<section id="reform">
+  <span class="timing">5 bis 15 Sekunden, Reform 2020</span>
+  <h2>Aus zwei werden vier</h2>
+  <div class="visual">
+    <img src="schaubilder/B-reform.jpeg" alt="Vorher-Nachher: links zwei Boxen bis 2020, rechts vier Boxen ab 2020">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Bis 2020 gab es nur zwei Fachrichtungen: <strong>Anwendungsentwicklung</strong> und <strong>Systemintegration</strong>. Seit August 2020 sind es vier. Neu dazugekommen: <strong>Daten- und Prozessanalyse</strong> und <strong>Digitale Vernetzung</strong>. Die größte IT-Berufsreform seit 1997.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>Die Fachinformatikerausbildungsverordnung (FIAusbV) wurde am 28. Februar 2020 erlassen (BGBl. I 2020 S. 250) und trat am 1. August 2020 in Kraft. Die alte Verordnung war von 1997.</p>
+  </div>
+</section>
+
+<section id="alt">
+  <span class="timing">15 bis 40 Sekunden, Zoom 1: die zwei alten Fachrichtungen</span>
+  <h2>Anwendungsentwicklung und Systemintegration</h2>
+  <div class="visual">
+    <img src="schaubilder/C-alt.jpeg" alt="Zwei Karten nebeneinander: Anwendungsentwicklung (programmieren) und Systemintegration (betreiben)">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Die <strong>Anwendungsentwicklung</strong> ist der Klassiker für alle, die programmieren wollen. Du baust zum Beispiel die App, mit der die Kunden eines Online-Shops ihre Bestellungen aufgeben. Typische Sprachen: Java, C-Sharp, Python, TypeScript. Typische Arbeitgeber: Softwarefirmen, Versicherungen, Banken, jeder Mittelständler mit eigener IT-Abteilung.</p>
+      <p>Die <strong>Systemintegration</strong> sorgt dafür, dass die Server, das Netzwerk, die Backups und die Firewall laufen. Du installierst und konfigurierst IT-Systeme, baust Active Directory auf, monitorst alles, fixt es, wenn es kaputt geht. Typische Arbeitgeber: Systemhäuser, Rechenzentren, IT-Abteilungen in jeder Branche.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>Verwechselungsgefahr mit dem IT-System-Elektroniker: der baut die Hardware und Stromversorgung physisch auf (Elektrotechnik-Anteil). Der Systemintegrator arbeitet eine Ebene darüber, also Betriebssystem, Netzwerk, Dienste.</p>
+  </div>
+</section>
+
+<section id="neu">
+  <span class="timing">40 bis 65 Sekunden, Zoom 2: die zwei neuen Fachrichtungen</span>
+  <h2>Daten- und Prozessanalyse und Digitale Vernetzung</h2>
+  <div class="visual">
+    <img src="schaubilder/D-neu.jpeg" alt="Zwei Karten nebeneinander: Daten- und Prozessanalyse (auswerten) und Digitale Vernetzung (vernetzen)">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Die <strong>Daten- und Prozessanalyse</strong> ist für alle, die mit Daten Geschäftsprozesse verbessern wollen. Du findest zum Beispiel aus Logfiles heraus, wo Kunden im Online-Shop den Bestellprozess abbrechen, und modellierst einen kürzeren Ablauf. Mathematik, Statistik, etwas Programmierung, plus Prozessdenken. Typische Arbeitgeber: Industrie, Handel, IT-Beratung.</p>
+      <p>Die <strong>Digitale Vernetzung</strong> baut die Brücke zwischen klassischer IT und Maschinen. Du verbindest zum Beispiel die Fräse in der Fabrik per Industrie-Protokoll mit dem Wartungs-Dashboard, damit Ausfälle vorhergesagt werden. Typische Arbeitgeber: Maschinenbau, Automobil-Zulieferer, Energiewirtschaft.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>BIBB veröffentlicht keine Aufteilung der Neuabschlüsse pro Fachrichtung. Eine Indikation aus den Umschulungsprüfungen 2023 (BIBB-Datenreport, Tab B4.4-2): Systemintegration und Anwendungsentwicklung dominieren, die zwei neuen sind in den Top-Listen nicht enthalten, ihre Fallzahlen liegen also deutlich darunter. Reguläre Azubi-Zahlen pro Fachrichtung sind nur per destatis-Sonderauswertung erhältlich.</p>
+  </div>
+</section>
+
+<section id="leitfrage">
+  <span class="timing">65 bis 80 Sekunden, Entscheidungsregel</span>
+  <h2>Eine Frage pro Fachrichtung</h2>
+  <div class="visual">
+    <img src="schaubilder/E-leitfrage.jpeg" alt="Vier Q-und-A-Karten: Leitfrage links, Fachrichtung rechts">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Also, wenn du dich entscheiden musst, frag dich vier Sachen. <strong>Baust du Software?</strong> Dann Anwendungsentwicklung. <strong>Hältst du Systeme am Laufen?</strong> Dann Systemintegration. <strong>Wertest du Daten aus?</strong> Dann Daten- und Prozessanalyse. <strong>Vernetzt du Maschinen?</strong> Dann Digitale Vernetzung.</p>
+    </div>
+  </div>
+  <div class="nuance">
+    <strong>Nuance, falls jemand widerspricht</strong>
+    <p>Diese Leitfragen sind eine didaktische Vereinfachung, sie stehen so nicht in der FIAusbV oder bei BERUFENET. Eine offizielle Profil-Zuordnung der Form "geeignet für ..." gibt es nicht. Wer fundiert testen will: Check-U der Bundesagentur für Arbeit.</p>
+  </div>
+</section>
+
+<section id="outro">
+  <span class="timing">80 bis 90 Sekunden, CTA</span>
+  <h2>Welche wäre deine?</h2>
+  <div class="visual">
+    <img src="schaubilder/F-outro.jpeg" alt="Welche wäre deine, vier Pillen mit den Fachrichtungs-Namen">
+    <div class="sprechtext">
+      <h3>Was du sagst</h3>
+      <p>Welche wäre deine? Schreib es in die Kommentare. Im nächsten Video gehe ich tiefer in eine der vier rein, die mit den meisten Stimmen.</p>
+    </div>
+  </div>
+</section>
+
+<section id="quellen" class="quellen">
+  <h2>Quellen</h2>
+
+  <p class="anbieter">Bundesministerium der Justiz, Rechtsgrundlage</p>
+  <ul>
+    <li><a href="https://www.gesetze-im-internet.de/fiausbv/">Fachinformatikerausbildungsverordnung (FIAusbV)</a>, vom 28. Februar 2020, in Kraft seit 1. August 2020. BGBl. I 2020 S. 250. Listet die vier Fachrichtungen in § 4 Abs. 1 Nr. 2 und die Einsatzgebiete in § 5.</li>
+    <li><a href="https://www.bibb.de/dienst/berufesuche/de/index_berufesuche.php/regulation/VO_Fachinformatiker_2020.pdf">Originalverordnung als PDF</a>, Volltext aus dem Bundesgesetzblatt.</li>
+  </ul>
+
+  <p class="anbieter">Bundesinstitut für Berufsbildung (BIBB)</p>
+  <ul>
+    <li><a href="https://www.bibb.de/dokumente/pdf/naa309/naa309_2025_tab067_0bund.pdf">BIBB Tab 67 - 2025 (Bund)</a>, Rangliste der Ausbildungsberufe nach Neuabschlüssen. Fachinformatiker bundesweit 15.072 Neuverträge, Rang 6. Stand 05.12.2025.</li>
+    <li><a href="https://www.bibb.de/dienst/publikationen/download/20621">BIBB-Datenreport zum Berufsbildungsbericht 2025</a>, Tabelle B4.4-2 (Umschulungsprüfungen 2023, Indikation zur Verteilung der Fachrichtungen).</li>
+    <li><a href="https://www.bibb.de/dienst/berufesuche/profile/apprenticeship/80000">BIBB Berufsprofil Fachinformatiker</a>, Kurzbeschreibung der vier Fachrichtungen.</li>
+  </ul>
+
+  <p class="anbieter">Bundesagentur für Arbeit</p>
+  <ul>
+    <li><a href="https://web.arbeitsagentur.de/entgeltatlas/beruf/7817">Entgeltatlas Fachinformatiker Systemintegration</a>, Median 4.749 EUR/Monat (Gesamtbestand 2024).</li>
+    <li><a href="https://web.arbeitsagentur.de/entgeltatlas/beruf/13659">Entgeltatlas Fachinformatiker Anwendungsentwicklung</a>, Median 4.483 EUR/Monat (Gesamtbestand 2024).</li>
+    <li><a href="https://web.arbeitsagentur.de/checku/">Check-U Selbsterkundungstool</a>, für die persönliche Berufsorientierung.</li>
+  </ul>
+</section>
+
+</body>
+</html>

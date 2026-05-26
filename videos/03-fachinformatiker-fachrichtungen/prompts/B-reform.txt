@@ -1,0 +1,40 @@
+Before-and-after comparison diagram in German for a clean infographic, showing the 2020 reform of the Fachinformatiker apprenticeship.
+
+Top center headline in bold mixed case: "Reform 2020: aus zwei werden vier"
+
+Below the headline, two equal-width column sections arranged horizontally with a large dark gray right-pointing arrow in the gap between them.
+
+Left column (about 40 percent of width):
+- Small dark gray label above the column, regular weight: "bis 2020"
+- Below the label, two equal-height stacked rounded rectangles with light gray (#E5E7EB) fill and dark gray (#1F2937) bold text:
+  - Top box: "Anwendungs-\nentwicklung"
+  - Bottom box: "System-\nintegration"
+
+Middle: one large simple dark gray arrow with triangular arrowhead pointing from left column to right column, about 80 pixels wide.
+
+Right column (about 40 percent of width):
+- Small dark gray label above the column, regular weight: "ab 2020"
+- Below the label, four equal-height stacked rounded rectangles. Top two boxes use light blue (#DBEAFE) fill with dark blue (#1E3A8A) bold text (the unchanged ones). Bottom two boxes use dark blue (#1E3A8A) fill with white bold text (the new ones, visually highlighted):
+  - First box (light blue, unchanged): "Anwendungs-\nentwicklung"
+  - Second box (light blue, unchanged): "System-\nintegration"
+  - Third box (dark blue, new): "Daten- und\nProzessanalyse"
+  - Fourth box (dark blue, new): "Digitale\nVernetzung"
+
+Below the right column, a small dark gray label in regular weight: "neu"
+
+Absolutely NO icons. NO sub-descriptions in the boxes. NO bullet points.
+
+Render as a clean technical infographic in the style of a scientific paper or
+textbook diagram (like draw.io, Lucidchart, IEEE figures):
+- White background (#FFFFFF)
+- Crisp geometric shapes only: rectangles with rounded corners (5 pixel radius)
+- Solid flat fills, NO gradients, NO glow, NO neon, NO drop shadows, NO blur
+- Color palette: light gray (#E5E7EB) for the old column boxes, light blue (#DBEAFE) for unchanged Fachrichtungen, dark blue (#1E3A8A) for new Fachrichtungen, dark gray (#1F2937) for arrow, headline and labels
+- Thin dark gray arrow (about 4 pixel) with simple triangular arrowhead
+- Sans-serif typography only (Inter / Helvetica / Arial), bold for headline and box labels, regular weight for the "bis 2020", "ab 2020" and "neu" labels
+- Each box contains ONLY the Fachrichtungs-name, absolutely NO sub-text
+- Generous white space, perfectly grid-aligned, symmetric composition
+- Render German umlauts correctly: ä, ö, ü, ß. Do not transliterate to ae, oe, ue, ss.
+- Mobile-readable: every label large enough at thumbnail size
+- NO hand-drawn or sketch aesthetic, NO whiteboard, NO 3D, NO illustrations of robots or characters, NO photorealistic elements
+- Aesthetic: looks like a figure from a computer science textbook or a Notion/Linear product diagram
